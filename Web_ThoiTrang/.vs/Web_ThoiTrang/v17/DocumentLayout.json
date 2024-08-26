@@ -1,12 +1,37 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\New folder\\Web_ThoiTrang\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CC373C78-C9EA-47BA-B477-A716B51181A1}|Web_ThoiTrang\\Web_ThoiTrang.csproj|c:\\filenaychubaitap\\fashion-sales-website\\web_thoitrang\\web_thoitrang\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{CC373C78-C9EA-47BA-B477-A716B51181A1}|Web_ThoiTrang\\Web_ThoiTrang.csproj|solutionrelative:web_thoitrang\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "style.css",
+              "DocumentMoniker": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\css\\style.css",
+              "RelativeDocumentMoniker": "Web_ThoiTrang\\wwwroot\\css\\style.css",
+              "ToolTip": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\css\\style.css",
+              "RelativeToolTip": "Web_ThoiTrang\\wwwroot\\css\\style.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-08-26T17:48:11.694Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -18,7 +18,7 @@ namespace Web_ThoiTrang.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult about()
         {
             return View();
         }

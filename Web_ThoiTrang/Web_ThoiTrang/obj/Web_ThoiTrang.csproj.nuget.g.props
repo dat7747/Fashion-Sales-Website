@@ -13,4 +13,7 @@
     <SourceRoot Include="C:\Users\Admin\.nuget\packages\" />
     <SourceRoot Include="C:\Users\Admin\OneDrive\Máy tính\Components\Offline Packages\" />
   </ItemGroup>
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgjQuery Condition=" '$(PkgjQuery)' == '' ">C:\Users\Admin\.nuget\packages\jquery\3.7.1</PkgjQuery>
+  </PropertyGroup>
 </Project>

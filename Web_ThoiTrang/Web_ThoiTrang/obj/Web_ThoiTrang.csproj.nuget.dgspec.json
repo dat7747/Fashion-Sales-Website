@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\OneDrive\\Máy tính\\New folder\\Web_ThoiTrang\\Web_ThoiTrang\\Web_ThoiTrang.csproj": {}
+    "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\Web_ThoiTrang.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\OneDrive\\Máy tính\\New folder\\Web_ThoiTrang\\Web_ThoiTrang\\Web_ThoiTrang.csproj": {
+    "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\Web_ThoiTrang.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\OneDrive\\Máy tính\\New folder\\Web_ThoiTrang\\Web_ThoiTrang\\Web_ThoiTrang.csproj",
+        "projectUniqueName": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\Web_ThoiTrang.csproj",
         "projectName": "Web_ThoiTrang",
-        "projectPath": "C:\\Users\\Admin\\OneDrive\\Máy tính\\New folder\\Web_ThoiTrang\\Web_ThoiTrang\\Web_ThoiTrang.csproj",
+        "projectPath": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\Web_ThoiTrang.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\OneDrive\\Máy tính\\New folder\\Web_ThoiTrang\\Web_ThoiTrang\\obj\\",
+        "outputPath": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Users\\Admin\\OneDrive\\Máy tính\\Components\\Offline Packages"
@@ -51,6 +51,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "jQuery": {
+              "target": "Package",
+              "version": "[3.7.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

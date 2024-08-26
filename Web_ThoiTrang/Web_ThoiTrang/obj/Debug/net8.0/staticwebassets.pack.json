@@ -1,0 +1,781 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Web_ThoiTrang.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Web_ThoiTrang.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\css\\animate.css",
+      "PackagePath": "staticwebassets\\css\\animate.css"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\css\\flexslider.css",
+      "PackagePath": "staticwebassets\\css\\flexslider.css"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\css\\icomoon.css",
+      "PackagePath": "staticwebassets\\css\\icomoon.css"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\css\\style.css.map",
+      "PackagePath": "staticwebassets\\css\\style.css.map"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\fonts\\bootstrap\\glyphicons-halflings-regular.eot",
+      "PackagePath": "staticwebassets\\fonts\\bootstrap\\glyphicons-halflings-regular.eot"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\fonts\\bootstrap\\glyphicons-halflings-regular.svg",
+      "PackagePath": "staticwebassets\\fonts\\bootstrap\\glyphicons-halflings-regular.svg"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\fonts\\bootstrap\\glyphicons-halflings-regular.ttf",
+      "PackagePath": "staticwebassets\\fonts\\bootstrap\\glyphicons-halflings-regular.ttf"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\fonts\\bootstrap\\glyphicons-halflings-regular.woff",
+      "PackagePath": "staticwebassets\\fonts\\bootstrap\\glyphicons-halflings-regular.woff"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\fonts\\bootstrap\\glyphicons-halflings-regular.woff2",
+      "PackagePath": "staticwebassets\\fonts\\bootstrap\\glyphicons-halflings-regular.woff2"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\fonts\\icomoon\\icomoon.eot",
+      "PackagePath": "staticwebassets\\fonts\\icomoon\\icomoon.eot"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\fonts\\icomoon\\icomoon.svg",
+      "PackagePath": "staticwebassets\\fonts\\icomoon\\icomoon.svg"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\fonts\\icomoon\\icomoon.ttf",
+      "PackagePath": "staticwebassets\\fonts\\icomoon\\icomoon.ttf"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\fonts\\icomoon\\icomoon.woff",
+      "PackagePath": "staticwebassets\\fonts\\icomoon\\icomoon.woff"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\fonts\\icomoon\\icomoon\\Read Me.txt",
+      "PackagePath": "staticwebassets\\fonts\\icomoon\\icomoon\\Read Me.txt"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\fonts\\icomoon\\icomoon\\demo-files\\demo.css",
+      "PackagePath": "staticwebassets\\fonts\\icomoon\\icomoon\\demo-files\\demo.css"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\fonts\\icomoon\\icomoon\\demo-files\\demo.js",
+      "PackagePath": "staticwebassets\\fonts\\icomoon\\icomoon\\demo-files\\demo.js"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\fonts\\icomoon\\icomoon\\demo.html",
+      "PackagePath": "staticwebassets\\fonts\\icomoon\\icomoon\\demo.html"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\fonts\\icomoon\\icomoon\\fonts\\icomoon.eot",
+      "PackagePath": "staticwebassets\\fonts\\icomoon\\icomoon\\fonts\\icomoon.eot"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\fonts\\icomoon\\icomoon\\fonts\\icomoon.svg",
+      "PackagePath": "staticwebassets\\fonts\\icomoon\\icomoon\\fonts\\icomoon.svg"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\fonts\\icomoon\\icomoon\\fonts\\icomoon.ttf",
+      "PackagePath": "staticwebassets\\fonts\\icomoon\\icomoon\\fonts\\icomoon.ttf"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\fonts\\icomoon\\icomoon\\fonts\\icomoon.woff",
+      "PackagePath": "staticwebassets\\fonts\\icomoon\\icomoon\\fonts\\icomoon.woff"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\fonts\\icomoon\\icomoon\\selection.json",
+      "PackagePath": "staticwebassets\\fonts\\icomoon\\icomoon\\selection.json"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\fonts\\icomoon\\icomoon\\style.css",
+      "PackagePath": "staticwebassets\\fonts\\icomoon\\icomoon\\style.css"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\images\\hero.jpg",
+      "PackagePath": "staticwebassets\\images\\hero.jpg"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\images\\img-1.jpg",
+      "PackagePath": "staticwebassets\\images\\img-1.jpg"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\images\\img-10.jpg",
+      "PackagePath": "staticwebassets\\images\\img-10.jpg"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\images\\img-11.jpg",
+      "PackagePath": "staticwebassets\\images\\img-11.jpg"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\images\\img-12.jpg",
+      "PackagePath": "staticwebassets\\images\\img-12.jpg"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\images\\img-2.jpg",
+      "PackagePath": "staticwebassets\\images\\img-2.jpg"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\images\\img-3.jpg",
+      "PackagePath": "staticwebassets\\images\\img-3.jpg"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\images\\img-4.jpg",
+      "PackagePath": "staticwebassets\\images\\img-4.jpg"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\images\\img-5.jpg",
+      "PackagePath": "staticwebassets\\images\\img-5.jpg"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\images\\img-6.jpg",
+      "PackagePath": "staticwebassets\\images\\img-6.jpg"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\images\\img-7.jpg",
+      "PackagePath": "staticwebassets\\images\\img-7.jpg"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\images\\img-8.jpg",
+      "PackagePath": "staticwebassets\\images\\img-8.jpg"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\images\\img-9.jpg",
+      "PackagePath": "staticwebassets\\images\\img-9.jpg"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\images\\loc.png",
+      "PackagePath": "staticwebassets\\images\\loc.png"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\images\\person.jpg",
+      "PackagePath": "staticwebassets\\images\\person.jpg"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\images\\person1.jpg",
+      "PackagePath": "staticwebassets\\images\\person1.jpg"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\images\\slide_1.jpg",
+      "PackagePath": "staticwebassets\\images\\slide_1.jpg"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\images\\slide_2.jpg",
+      "PackagePath": "staticwebassets\\images\\slide_2.jpg"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\images\\slide_3.jpg",
+      "PackagePath": "staticwebassets\\images\\slide_3.jpg"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\js\\jquery.countTo.js",
+      "PackagePath": "staticwebassets\\js\\jquery.countTo.js"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\js\\jquery.easing.1.3.js",
+      "PackagePath": "staticwebassets\\js\\jquery.easing.1.3.js"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\js\\jquery.flexslider-min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.flexslider-min.js"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\js\\jquery.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\js\\jquery.waypoints.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.waypoints.min.js"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\js\\main.js",
+      "PackagePath": "staticwebassets\\js\\main.js"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\js\\modernizr-2.6.2.min.js",
+      "PackagePath": "staticwebassets\\js\\modernizr-2.6.2.min.js"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\js\\respond.min.js",
+      "PackagePath": "staticwebassets\\js\\respond.min.js"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\_bootstrap-compass.scss",
+      "PackagePath": "staticwebassets\\sass\\_bootstrap-compass.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\_bootstrap-mincer.scss",
+      "PackagePath": "staticwebassets\\sass\\_bootstrap-mincer.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\_bootstrap-sprockets.scss",
+      "PackagePath": "staticwebassets\\sass\\_bootstrap-sprockets.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\_alerts.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\_alerts.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\_badges.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\_badges.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\_breadcrumbs.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\_breadcrumbs.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\_button-groups.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\_button-groups.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\_buttons.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\_buttons.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\_carousel.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\_carousel.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\_close.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\_close.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\_code.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\_code.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\_component-animations.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\_component-animations.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\_dropdowns.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\_dropdowns.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\_forms.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\_forms.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\_glyphicons.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\_glyphicons.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\_grid.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\_grid.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\_input-groups.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\_input-groups.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\_jumbotron.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\_jumbotron.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\_labels.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\_labels.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\_list-group.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\_list-group.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\_media.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\_media.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\_mixins.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\_mixins.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\_modals.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\_modals.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\_navbar.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\_navbar.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\_navs.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\_navs.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\_normalize.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\_normalize.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\_pager.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\_pager.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\_pagination.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\_pagination.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\_panels.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\_panels.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\_popovers.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\_popovers.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\_print.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\_print.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\_progress-bars.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\_progress-bars.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\_responsive-embed.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\_responsive-embed.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\_responsive-utilities.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\_responsive-utilities.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\_scaffolding.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\_scaffolding.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\_tables.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\_tables.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\_theme.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\_theme.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\_thumbnails.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\_thumbnails.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\_tooltip.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\_tooltip.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\_type.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\_type.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\_utilities.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\_utilities.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\_variables.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\_variables.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\_wells.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\_wells.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\mixins\\_alerts.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\mixins\\_alerts.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\mixins\\_background-variant.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\mixins\\_background-variant.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\mixins\\_border-radius.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\mixins\\_border-radius.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\mixins\\_buttons.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\mixins\\_buttons.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\mixins\\_center-block.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\mixins\\_center-block.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\mixins\\_clearfix.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\mixins\\_clearfix.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\mixins\\_forms.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\mixins\\_forms.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\mixins\\_gradients.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\mixins\\_gradients.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\mixins\\_grid-framework.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\mixins\\_grid-framework.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\mixins\\_grid.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\mixins\\_grid.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\mixins\\_hide-text.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\mixins\\_hide-text.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\mixins\\_image.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\mixins\\_image.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\mixins\\_labels.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\mixins\\_labels.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\mixins\\_list-group.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\mixins\\_list-group.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\mixins\\_nav-divider.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\mixins\\_nav-divider.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\mixins\\_nav-vertical-align.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\mixins\\_nav-vertical-align.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\mixins\\_opacity.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\mixins\\_opacity.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\mixins\\_pagination.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\mixins\\_pagination.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\mixins\\_panels.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\mixins\\_panels.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\mixins\\_progress-bar.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\mixins\\_progress-bar.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\mixins\\_reset-filter.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\mixins\\_reset-filter.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\mixins\\_reset-text.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\mixins\\_reset-text.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\mixins\\_resize.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\mixins\\_resize.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\mixins\\_responsive-visibility.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\mixins\\_responsive-visibility.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\mixins\\_size.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\mixins\\_size.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\mixins\\_tab-focus.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\mixins\\_tab-focus.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\mixins\\_table-row.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\mixins\\_table-row.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\mixins\\_text-emphasis.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\mixins\\_text-emphasis.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\mixins\\_text-overflow.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\mixins\\_text-overflow.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\bootstrap\\mixins\\_vendor-prefixes.scss",
+      "PackagePath": "staticwebassets\\sass\\bootstrap\\mixins\\_vendor-prefixes.scss"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\sass\\style.scss",
+      "PackagePath": "staticwebassets\\sass\\style.scss"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Web_ThoiTrang.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Web_ThoiTrang.props",
+      "PackagePath": "build\\Web_ThoiTrang.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Web_ThoiTrang.props",
+      "PackagePath": "buildMultiTargeting\\Web_ThoiTrang.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Web_ThoiTrang.props",
+      "PackagePath": "buildTransitive\\Web_ThoiTrang.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
