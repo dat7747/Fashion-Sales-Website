@@ -1,0 +1,84 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0-windows7.0": {}
+  },
+  "libraries": {},
+  "projectFileDependencyGroups": {
+    "net8.0-windows7.0": []
+  },
+  "packageFolders": {
+    "C:\\Users\\Admin\\.nuget\\packages\\": {},
+    "C:\\Users\\Admin\\OneDrive\\Máy tính\\Components\\Offline Packages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\Admin\\OneDrive\\Máy tính\\Winform_ThoiTrang\\Winform_ThoiTrang\\Winform_ThoiTrang.csproj",
+      "projectName": "Winform_ThoiTrang",
+      "projectPath": "C:\\Users\\Admin\\OneDrive\\Máy tính\\Winform_ThoiTrang\\Winform_ThoiTrang\\Winform_ThoiTrang.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Admin\\OneDrive\\Máy tính\\Winform_ThoiTrang\\Winform_ThoiTrang\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Users\\Admin\\OneDrive\\Máy tính\\Components\\Offline Packages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 24.1.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0-windows"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "C:\\Users\\Admin\\Downloads\\QL Quán Cafe": {},
+        "C:\\Users\\Admin\\OneDrive\\Máy tính\\Components\\System\\Components\\Packages": {},
+        "https://www.nuget.org/api/v2/": {}
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      }
+    },
+    "frameworks": {
+      "net8.0-windows7.0": {
+        "targetAlias": "net8.0-windows",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WPF": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

@@ -1,0 +1,83 @@
+﻿<Window x:Class="Winform_ThoiTrang.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <!-- Menu Bar -->
+        <Menu VerticalAlignment="Top" HorizontalAlignment="Stretch" Height="50">
+            <!-- Home Menu Item -->
+            <MenuItem>
+                <MenuItem.HeaderTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Source="images/home.png" Width="24" Height="24" Grid.Column="0"/>
+                            <TextBlock Text="Home" VerticalAlignment="Center" Grid.Column="1" HorizontalAlignment="Left" Margin="5,0,0,0"/>
+                        </Grid>
+                    </DataTemplate>
+                </MenuItem.HeaderTemplate>
+            </MenuItem>
+
+            <!-- Manage Menu Item -->
+            <MenuItem>
+                <MenuItem.HeaderTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Source="images/manage.png" Width="24" Height="24" Grid.Column="0"/>
+                            <TextBlock Text="Manage" VerticalAlignment="Center" Grid.Column="1" HorizontalAlignment="Left" Margin="5,0,0,0"/>
+                        </Grid>
+                    </DataTemplate>
+                </MenuItem.HeaderTemplate>
+                <MenuItem Header="Shoes"/>
+                <MenuItem Header="Handbag"/>
+                <MenuItem Header="Clothes"/>
+                <MenuItem Header="Bill"/>
+                <MenuItem Header="Staff"/>
+            </MenuItem>
+
+            <!-- Setting Menu Item -->
+            <MenuItem>
+                <MenuItem.HeaderTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Source="images/settings.png" Width="24" Height="24" Grid.Column="0"/>
+                            <TextBlock Text="Setting" VerticalAlignment="Center" Grid.Column="1" HorizontalAlignment="Left" Margin="5,0,0,0"/>
+                        </Grid>
+                    </DataTemplate>
+                </MenuItem.HeaderTemplate>
+                <MenuItem Header="Account"/>
+                <MenuItem Header="Decentralization"/>
+                <MenuItem Header="Logout"/>
+            </MenuItem>
+
+            <!-- Statistical Menu Item -->
+            <MenuItem>
+                <MenuItem.HeaderTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Source="images/statistics.png" Width="24" Height="24" Grid.Column="0"/>
+                            <TextBlock Text="Statistical" VerticalAlignment="Center" Grid.Column="1" HorizontalAlignment="Left" Margin="5,0,0,0"/>
+                        </Grid>
+                    </DataTemplate>
+                </MenuItem.HeaderTemplate>
+                <MenuItem Header="Entry Form"/>
+                <MenuItem Header="Bill"/>
+            </MenuItem>
+        </Menu>
+    </Grid>
+</Window>
