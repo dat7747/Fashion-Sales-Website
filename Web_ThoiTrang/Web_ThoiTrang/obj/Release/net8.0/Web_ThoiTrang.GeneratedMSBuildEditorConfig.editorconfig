@@ -18,12 +18,24 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\FileNayChuBaiTap\Fashion-Sales-Website\Web_ThoiTrang\Web_ThoiTrang
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/FileNayChuBaiTap/Fashion-Sales-Website/Web_ThoiTrang/Web_ThoiTrang/Views/Home/about.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxhYm91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/FileNayChuBaiTap/Fashion-Sales-Website/Web_ThoiTrang/Web_ThoiTrang/Views/Home/contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxjb250YWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/FileNayChuBaiTap/Fashion-Sales-Website/Web_ThoiTrang/Web_ThoiTrang/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/FileNayChuBaiTap/Fashion-Sales-Website/Web_ThoiTrang/Web_ThoiTrang/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+[C:/FileNayChuBaiTap/Fashion-Sales-Website/Web_ThoiTrang/Web_ThoiTrang/Views/Home/product.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxwcm9kdWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/FileNayChuBaiTap/Fashion-Sales-Website/Web_ThoiTrang/Web_ThoiTrang/Views/Home/work.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVx3b3JrLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/FileNayChuBaiTap/Fashion-Sales-Website/Web_ThoiTrang/Web_ThoiTrang/Views/Shared/Error.cshtml]

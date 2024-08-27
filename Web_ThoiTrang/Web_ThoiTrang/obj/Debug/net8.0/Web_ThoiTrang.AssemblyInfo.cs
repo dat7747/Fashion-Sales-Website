@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Web_ThoiTrang")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+68e0305d8d11d81eb2a4d7b6e29956d59a7eb48f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9f3952aefc7bbd74e6874af08646057e8413ecfb")]
 [assembly: System.Reflection.AssemblyProductAttribute("Web_ThoiTrang")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Web_ThoiTrang")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Web_ThoiTrang")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c31d34274a053e5060228d915a5d1978bc30a4c9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9f3952aefc7bbd74e6874af08646057e8413ecfb")]
 [assembly: System.Reflection.AssemblyProductAttribute("Web_ThoiTrang")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Web_ThoiTrang")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -113,6 +113,22 @@
       "PackagePath": "staticwebassets\\fonts\\icomoon\\icomoon\\style.css"
     },
     {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\images\\clothes\\test.jpg",
+      "PackagePath": "staticwebassets\\images\\clothes\\test.jpg"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\images\\clothes\\test1.jpg",
+      "PackagePath": "staticwebassets\\images\\clothes\\test1.jpg"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\images\\clothes\\test2.jpg",
+      "PackagePath": "staticwebassets\\images\\clothes\\test2.jpg"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\images\\clothes\\test3.jpg",
+      "PackagePath": "staticwebassets\\images\\clothes\\test3.jpg"
+    },
+    {
       "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\images\\hero.jpg",
       "PackagePath": "staticwebassets\\images\\hero.jpg"
     },

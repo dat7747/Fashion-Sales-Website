@@ -23,6 +23,17 @@ namespace Web_ThoiTrang.Controllers
             return View();
         }
 
+        public IActionResult contact(){
+            return View();
+        }
+
+        public IActionResult product(){
+            return View();
+        }
+
+        public IActionResult work(){
+            return View();
+        }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
