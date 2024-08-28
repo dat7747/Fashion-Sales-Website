@@ -20,5 +20,12 @@ namespace Winform_ThoiTrang
         {
             InitializeComponent();
         }
+
+        public void ShoesMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            frm_Shoes shoes_form = new frm_Shoes();
+
+            MainContent.Content = shoes_form;
+        }
     }
 }

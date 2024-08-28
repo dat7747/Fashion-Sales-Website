@@ -8,4 +8,39 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="images\account.png" />
+    <None Remove="images\bill.png" />
+    <None Remove="images\clothes.png" />
+    <None Remove="images\decentralization.png" />
+    <None Remove="images\entryform.png" />
+    <None Remove="images\handbag.png" />
+    <None Remove="images\home.png" />
+    <None Remove="images\logout.png" />
+    <None Remove="images\manage.png" />
+    <None Remove="images\settings.png" />
+    <None Remove="images\shoes.png" />
+    <None Remove="images\staff.png" />
+    <None Remove="images\statistics.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="images\account.png" />
+    <Resource Include="images\bill.png" />
+    <Resource Include="images\clothes.png" />
+    <Resource Include="images\decentralization.png" />
+    <Resource Include="images\entryform.png" />
+    <Resource Include="images\handbag.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="images\home.png" />
+    <Resource Include="images\logout.png" />
+    <Resource Include="images\manage.png" />
+    <Resource Include="images\settings.png" />
+    <Resource Include="images\shoes.png" />
+    <Resource Include="images\staff.png" />
+    <Resource Include="images\statistics.png" />
+  </ItemGroup>
+
 </Project>
