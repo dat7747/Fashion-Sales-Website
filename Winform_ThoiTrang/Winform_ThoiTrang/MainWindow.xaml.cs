@@ -27,5 +27,9 @@ namespace Winform_ThoiTrang
 
             MainContent.Content = shoes_form;
         }
+
+        public void StoreMenuitem_Click(object sender, RoutedEventArgs e) {
+            MainContent.Content = new frm_Home();
+        }
     }
 }

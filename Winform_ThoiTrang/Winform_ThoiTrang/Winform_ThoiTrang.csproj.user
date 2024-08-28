@@ -7,11 +7,17 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="frm_Home.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="frm_Shoes.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="frm_Home.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="frm_Shoes.xaml">
       <SubType>Designer</SubType>
     </Page>

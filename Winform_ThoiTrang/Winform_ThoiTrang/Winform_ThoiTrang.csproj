@@ -11,6 +11,7 @@
   <ItemGroup>
     <None Remove="images\account.png" />
     <None Remove="images\bill.png" />
+    <None Remove="images\cart.png" />
     <None Remove="images\clothes.png" />
     <None Remove="images\decentralization.png" />
     <None Remove="images\entryform.png" />
@@ -27,6 +28,7 @@
   <ItemGroup>
     <Resource Include="images\account.png" />
     <Resource Include="images\bill.png" />
+    <Resource Include="images\cart.png" />
     <Resource Include="images\clothes.png" />
     <Resource Include="images\decentralization.png" />
     <Resource Include="images\entryform.png" />

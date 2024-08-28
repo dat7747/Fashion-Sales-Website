@@ -39,3 +39,6 @@ C:\FileNayChuBaiTap\Fashion-Sales-Website\Winform_ThoiTrang\Winform_ThoiTrang\ob
 C:\FileNayChuBaiTap\Fashion-Sales-Website\Winform_ThoiTrang\Winform_ThoiTrang\obj\Debug\net8.0-windows\ref\Winform_ThoiTrang.dll
 C:\FileNayChuBaiTap\Fashion-Sales-Website\Winform_ThoiTrang\Winform_ThoiTrang\obj\Debug\net8.0-windows\frm_Shoes.baml
 C:\FileNayChuBaiTap\Fashion-Sales-Website\Winform_ThoiTrang\Winform_ThoiTrang\obj\Debug\net8.0-windows\frm_Shoes.g.cs
+C:\FileNayChuBaiTap\Fashion-Sales-Website\Winform_ThoiTrang\Winform_ThoiTrang\obj\Debug\net8.0-windows\frm_Home.g.cs
+C:\FileNayChuBaiTap\Fashion-Sales-Website\Winform_ThoiTrang\Winform_ThoiTrang\obj\Debug\net8.0-windows\Winform_ThoiTrang_MarkupCompile.lref
+C:\FileNayChuBaiTap\Fashion-Sales-Website\Winform_ThoiTrang\Winform_ThoiTrang\obj\Debug\net8.0-windows\frm_Home.baml
