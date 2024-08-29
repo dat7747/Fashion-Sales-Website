@@ -1,0 +1,156 @@
+﻿<Window x:Class="Winform_ThoiTrang.frm_AddProducts"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Thêm Sản Phẩm" Height="682" Width="405"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
+    <Grid>
+        <StackPanel Margin="20">
+            <!-- Tiêu đề -->
+            <TextBlock Text="Thêm Sản Phẩm Mới" 
+                       FontSize="20" 
+                       FontWeight="Bold" 
+                       Margin="0,0,0,20"/>
+
+            <!-- Nhập tên sản phẩm -->
+            <StackPanel Margin="0,0,0,10">
+                <TextBlock Text="Tên Sản Phẩm" FontWeight="Bold"/>
+                <TextBox x:Name="TenSanPhamTextBox" 
+                         Height="30" 
+                         Margin="0,5,0,0" 
+                         BorderBrush="#FFB100" 
+                         BorderThickness="1"/>
+            </StackPanel>
+
+            <!-- Nhập giá -->
+            <StackPanel Margin="0,0,0,10">
+                <TextBlock Text="Giá" FontWeight="Bold"/>
+                <TextBox x:Name="GiaTextBox" 
+                         Height="30" 
+                         Margin="0,5,0,0" 
+                         BorderBrush="#FFB100" 
+                         BorderThickness="1"/>
+            </StackPanel>
+
+            <!-- Nhập mô tả -->
+            <StackPanel Margin="0,0,0,10">
+                <TextBlock Text="Mô Tả" FontWeight="Bold"/>
+                <TextBox x:Name="MoTaTextBox" 
+                         Height="80" 
+                         Margin="0,5,0,0" 
+                         AcceptsReturn="True" 
+                         VerticalScrollBarVisibility="Auto" 
+                         BorderBrush="#FFB100" 
+                         BorderThickness="1"/>
+            </StackPanel>
+
+            <!-- Nhập chất liệu -->
+            <StackPanel Margin="0,0,0,10">
+                <TextBlock Text="Chất Liệu" FontWeight="Bold"/>
+                <TextBox x:Name="ChatLieuTextBox" 
+                         Height="30" 
+                         Margin="0,5,0,0" 
+                         BorderBrush="#FFB100" 
+                         BorderThickness="1"/>
+            </StackPanel>
+
+            <!-- Nhập nhà sản xuất -->
+            <StackPanel Margin="0,0,0,20">
+                <TextBlock Text="Nhà Sản Xuất" FontWeight="Bold"/>
+                <TextBox x:Name="NhaSanXuatTextBox" 
+                         Height="30" 
+                         Margin="0,5,0,0" 
+                         BorderBrush="#FFB100" 
+                         BorderThickness="1"/>
+            </StackPanel>
+
+            <!-- Nhập loại sản phẩm -->
+            <StackPanel Margin="0,0,0,10">
+                <TextBlock Text="Loại Sản Phẩm" FontWeight="Bold"/>
+                <ComboBox x:Name="LoaiSanPhamComboBox" 
+                          FontSize="13"
+                          Height="30" 
+                          Margin="0,5,0,0" 
+                          BorderBrush="#FFB100" 
+                          BorderThickness="1">
+                    <!-- Thêm các item vào ComboBox -->
+                </ComboBox>
+            </StackPanel>
+
+            <!-- Chọn hình ảnh -->
+            <Grid Margin="0,0,0,20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <!-- Các nút chọn hình ảnh -->
+                <Button Content="Chọn Hình 1" 
+                    Width="120" 
+                    Height="30" 
+                    Background="#FFB100" 
+                    Foreground="White" 
+                    BorderBrush="#FFB100" 
+                    BorderThickness="1"
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    Margin="5"
+                    Click="ChooseImageButton1_Click"/>
+                <Button Content="Chọn Hình 2" 
+                    Width="120" 
+                    Height="30" 
+                    Background="#FFB100" 
+                    Foreground="White" 
+                    BorderBrush="#FFB100" 
+                    BorderThickness="1"
+                    Grid.Column="1"
+                    Grid.Row="0"
+                    Margin="5"
+                    Click="ChooseImageButton2_Click"/>
+                <Button Content="Chọn Hình 3" 
+                    Width="120" 
+                    Height="30" 
+                    Background="#FFB100" 
+                    Foreground="White" 
+                    BorderBrush="#FFB100" 
+                    BorderThickness="1"
+                    Grid.Column="2"
+                    Grid.Row="0"
+                    Margin="5"
+                    Click="ChooseImageButton3_Click"/>
+
+                <!-- Các TextBlock hiển thị tên file hình ảnh -->
+                <StackPanel Grid.Row="1" Grid.ColumnSpan="3" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0">
+                    <TextBlock x:Name="ImageFileNameTextBlock1" 
+                           Text="Chưa chọn hình ảnh" 
+                           Margin="5" 
+                           Width="120"/>
+                    <TextBlock x:Name="ImageFileNameTextBlock2" 
+                           Text="Chưa chọn hình ảnh" 
+                           Margin="5" 
+                           Width="120"/>
+                    <TextBlock x:Name="ImageFileNameTextBlock3" 
+                           Text="Chưa chọn hình ảnh" 
+                           Margin="5" 
+                           Width="120"/>
+                </StackPanel>
+            </Grid>
+
+            <!-- Nút Lưu -->
+            <Button Content="Lưu" 
+                    Width="80" 
+                    Height="30" 
+                    HorizontalAlignment="Right" 
+                    Background="#FFB100" 
+                    Foreground="White" 
+                    BorderBrush="#FFB100" 
+                    BorderThickness="1"
+                    Click="SaveButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

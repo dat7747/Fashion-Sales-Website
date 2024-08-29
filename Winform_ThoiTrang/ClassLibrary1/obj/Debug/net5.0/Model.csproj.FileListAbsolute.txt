@@ -1,0 +1,5 @@
+C:\FileNayChuBaiTap\Fashion-Sales-Website\Winform_ThoiTrang\ClassLibrary1\obj\Debug\net5.0\Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\FileNayChuBaiTap\Fashion-Sales-Website\Winform_ThoiTrang\ClassLibrary1\obj\Debug\net5.0\Model.AssemblyInfoInputs.cache
+C:\FileNayChuBaiTap\Fashion-Sales-Website\Winform_ThoiTrang\ClassLibrary1\obj\Debug\net5.0\Model.AssemblyInfo.cs
+C:\FileNayChuBaiTap\Fashion-Sales-Website\Winform_ThoiTrang\ClassLibrary1\obj\Debug\net5.0\Model.csproj.CoreCompileInputs.cache
+C:\FileNayChuBaiTap\Fashion-Sales-Website\Winform_ThoiTrang\ClassLibrary1\obj\Debug\net5.0\Model.sourcelink.json
