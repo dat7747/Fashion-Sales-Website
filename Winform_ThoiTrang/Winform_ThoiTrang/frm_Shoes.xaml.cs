@@ -31,15 +31,6 @@ namespace Winform_ThoiTrang
             _context = new ApplicationDbContext(optionsBuider.Options);
             getPruduts();
         }
-        private void BtnEdit_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Chức năng chỉnh sửa thành công");
-        }
-
-        private void BtnDelete_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Chức năng xóa thành công");
-        }
 
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
@@ -49,13 +40,83 @@ namespace Winform_ThoiTrang
 
             getPruduts();
         }
+
+        private void EditButton_Click(Object sender, RoutedEventArgs e)
+        {
+            var selectedProduct = ProductDataGrid.SelectedItem;
+
+            if (selectedProduct == null)
+            {
+                MessageBox.Show("Vui lòng chọn một sản phẩm để Sửa");
+                return;
+            }
+
+            var sanPhamID = (int)selectedProduct.GetType().GetProperty("SanPhamID").GetValue(selectedProduct, null);
+
+            var editproducts = new frm_EditProducts(sanPhamID);
+            editproducts.ShowDialog();
+            getPruduts();
+        }
+            
+        private void DeleteButton_Click(Object sender, RoutedEventArgs e)
+        {
+            var selectedProduct = ProductDataGrid.SelectedItem;
+
+            if (selectedProduct == null)
+            {
+                MessageBox.Show("Vui lòng chọn một sản phẩm để xóa");
+                return;
+            }
+
+            var sanPhamID = (int)selectedProduct.GetType().GetProperty("SanPhamID").GetValue(selectedProduct, null);
+
+            var result = MessageBox.Show("Bạn có chắc muốn xóa không", "Thông báo", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+            if (result == MessageBoxResult.Yes)
+            {
+                using (var transaction = _context.Database.BeginTransaction())
+                {
+                    try
+                    {
+                        var images = _context.HinhAnhSanPham.Where(img => img.SanPhamID == sanPhamID).ToList();
+                        _context.HinhAnhSanPham.RemoveRange(images);
+
+                        var productToDelete = _context.SanPham.Find(sanPhamID);
+                        if (productToDelete != null)
+                        {
+                            _context.SanPham.Remove(productToDelete);
+                            _context.SaveChanges();
+                        }
+
+                        transaction.Commit();
+                        getPruduts();
+                        MessageBox.Show("Xóa Thành Công","Thông báo",MessageBoxButton.OK);
+                    }
+                    catch (Exception ex)
+                    {
+                        transaction.Rollback();
+                        MessageBox.Show("Có lỗi xảy ra: " + ex.Message);
+                    }
+                }
+            }
+        }
+
         //==========================================TRUY VẤN=====================
         //Lấy danh sách hiển thị giày 
         private void getPruduts()
         {
-            var result = _context.SanPham.ToList();
+            var result = _context.SanPham
+                .Select(sp => new
+                {
+                    sp.SanPhamID,
+                    sp.TenSanPham,
+                    sp.Gia,
+                    sp.ChatLieu,
+                    sp.NhaSanXuat,
+                    sp.LoaiSanPhamID,
+                    HinhAnh = sp.HinhAnhSanPham.FirstOrDefault().HinhAnh
+                }).ToList();
             ProductDataGrid.ItemsSource = result;
         }
-
     }
 }

@@ -40,7 +40,7 @@ namespace Winform_ThoiTrang
         }
         private void ChooseImageButton2_Click(object sender, RoutedEventArgs e)
         {
-            ChooseImage(out _pathimages2, ImageFileNameTextBlock2);
+            ChooseImage(out _pathimages1, ImageFileNameTextBlock2);
         }
         private void ChooseImageButton3_Click(object sender, RoutedEventArgs e)
         {
@@ -99,7 +99,7 @@ namespace Winform_ThoiTrang
             };
 
             _context.SanPham.Add(sanPham);
-            _context.HinhAnhSanPhams.AddRange(hinhAnhSP);
+            _context.HinhAnhSanPham.AddRange(hinhAnhSP);
             _context.SaveChanges();
 
             MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);

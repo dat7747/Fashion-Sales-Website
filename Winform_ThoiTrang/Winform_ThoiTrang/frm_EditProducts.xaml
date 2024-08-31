@@ -1,0 +1,92 @@
+﻿<Window x:Class="Winform_ThoiTrang.frm_EditProducts"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Sửa Sản Phẩm" Height="579" Width="403"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
+    <Grid>
+        <StackPanel Margin="20">
+            <!-- Tiêu đề -->
+            <TextBlock Text="Sửa Sản Phẩm" 
+                       FontSize="20" 
+                       FontWeight="Bold" 
+                       Margin="0,0,0,20"/>
+
+            <!-- Nhập tên sản phẩm -->
+            <StackPanel Margin="0,0,0,10">
+                <TextBlock Text="Tên Sản Phẩm" FontWeight="Bold"/>
+                <TextBox x:Name="TenSanPhamTextBox" 
+                         Height="30" 
+                         Margin="0,5,0,0" 
+                         BorderBrush="#FFB100" 
+                         BorderThickness="1"/>
+            </StackPanel>
+
+            <!-- Nhập giá -->
+            <StackPanel Margin="0,0,0,10">
+                <TextBlock Text="Giá" FontWeight="Bold"/>
+                <TextBox x:Name="GiaTextBox" 
+                         Height="30" 
+                         Margin="0,5,0,0" 
+                         BorderBrush="#FFB100" 
+                         BorderThickness="1"/>
+            </StackPanel>
+
+            <!-- Nhập mô tả -->
+            <StackPanel Margin="0,0,0,10">
+                <TextBlock Text="Mô Tả" FontWeight="Bold"/>
+                <TextBox x:Name="MoTaTextBox" 
+                         Height="80" 
+                         Margin="0,5,0,0" 
+                         AcceptsReturn="True" 
+                         VerticalScrollBarVisibility="Auto" 
+                         BorderBrush="#FFB100" 
+                         BorderThickness="1"/>
+            </StackPanel>
+
+            <!-- Nhập chất liệu -->
+            <StackPanel Margin="0,0,0,10">
+                <TextBlock Text="Chất Liệu" FontWeight="Bold"/>
+                <TextBox x:Name="ChatLieuTextBox" 
+                         Height="30" 
+                         Margin="0,5,0,0" 
+                         BorderBrush="#FFB100" 
+                         BorderThickness="1"/>
+            </StackPanel>
+
+            <!-- Nhập nhà sản xuất -->
+            <StackPanel Margin="0,0,0,20">
+                <TextBlock Text="Nhà Sản Xuất" FontWeight="Bold"/>
+                <TextBox x:Name="NhaSanXuatTextBox" 
+                         Height="30" 
+                         Margin="0,5,0,0" 
+                         BorderBrush="#FFB100" 
+                         BorderThickness="1"/>
+            </StackPanel>
+
+            <!-- Nhập loại sản phẩm -->
+            <StackPanel Margin="0,0,0,10">
+                <TextBlock Text="Loại Sản Phẩm" FontWeight="Bold"/>
+                <ComboBox x:Name="LoaiSanPhamComboBox" 
+                          FontSize="13"
+                          Height="30" 
+                          Margin="0,5,0,0" 
+                          BorderBrush="#FFB100" 
+                          BorderThickness="1">
+                    <!-- Thêm các item vào ComboBox -->
+                </ComboBox>
+            </StackPanel>
+
+            <!-- Nút Lưu -->
+            <Button Content="Lưu" 
+                    Width="80" 
+                    Height="30" 
+                    HorizontalAlignment="Right" 
+                    Background="#FFB100" 
+                    Foreground="White" 
+                    BorderBrush="#FFB100" 
+                    BorderThickness="1"
+                    Click="btnLuu_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

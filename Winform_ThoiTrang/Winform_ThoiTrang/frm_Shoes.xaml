@@ -47,9 +47,9 @@
         <!-- Danh Sách Sản Phẩm -->
         <DataGrid x:Name="ProductDataGrid" 
           Margin="20,120,20,60" 
-          AutoGenerateColumns="False" 
-          IsReadOnly="True" 
+          AutoGenerateColumns="False"  
           Background="White" 
+          IsReadOnly="true"
           BorderBrush="#FFB100" 
           BorderThickness="1">
             <DataGrid.Resources>
@@ -71,21 +71,29 @@
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
+                <!-- Cột Tên Sản Phẩm -->
                 <DataGridTextColumn Header="Tên Sản Phẩm" 
-                            Binding="{Binding TenSanPham}" 
-                            Width="*"/>
+                            Binding="{Binding TenSanPham, UpdateSourceTrigger=PropertyChanged}" 
+                            Width="*" />
+                <!-- Cột Giá -->
                 <DataGridTextColumn Header="Giá" 
-                            Binding="{Binding Gia}" 
-                            Width="100"/>
+                            Binding="{Binding Gia, StringFormat={}{0:N0}đ, UpdateSourceTrigger=PropertyChanged}" 
+                            Width="100" />
+
+                <!-- Cột Loại Sản Phẩm -->
                 <DataGridTextColumn Header="Loại Sản Phẩm" 
-                            Binding="{Binding LoaiSanPhamID}" 
-                            Width="150"/>
+                            Binding="{Binding LoaiSanPhamID, UpdateSourceTrigger=PropertyChanged}" 
+                            Width="150" />
+
+                <!-- Cột Chất Liệu -->
                 <DataGridTextColumn Header="Chất Liệu" 
-                            Binding="{Binding ChatLieu}" 
-                            Width="150"/>
+                            Binding="{Binding ChatLieu, UpdateSourceTrigger=PropertyChanged}" 
+                            Width="150" />
+
+                <!-- Cột Nhà Sản Xuất -->
                 <DataGridTextColumn Header="Nhà Sản Xuất" 
-                            Binding="{Binding NhaSanXuat}" 
-                            Width="200"/>
+                            Binding="{Binding NhaSanXuat, UpdateSourceTrigger=PropertyChanged}" 
+                            Width="200" />
             </DataGrid.Columns>
         </DataGrid>
 
@@ -93,7 +101,7 @@
         <StackPanel Orientation="Horizontal" 
                     VerticalAlignment="Top" 
                     HorizontalAlignment="Left" 
-                    Margin="273,560,0,0" Height="39" Width="399">
+                    Margin="340,560,0,0" Height="39" Width="390">
             <Button Content="Thêm" 
                     Width="90" 
                     Margin="5" 
@@ -108,21 +116,16 @@
                     Background="#FFB100" 
                     Foreground="White" 
                     BorderBrush="#FFB100" 
-                    BorderThickness="1"/>
+                    BorderThickness="1"
+                    Click="EditButton_Click"/>
             <Button Content="Xóa" 
                     Width="90" 
                     Margin="5" 
                     Background="#FFB100" 
                     Foreground="White" 
                     BorderBrush="#FFB100" 
-                    BorderThickness="1"/>
-            <Button Content="Lưu" 
-                    Width="90" 
-                    Margin="5" 
-                    Background="#FFB100" 
-                    Foreground="White" 
-                    BorderBrush="#FFB100" 
-                    BorderThickness="1"/>
+                    BorderThickness="1"
+                    Click="DeleteButton_Click"/>
         </StackPanel>
 
         <!-- Footer -->

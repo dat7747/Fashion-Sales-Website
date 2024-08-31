@@ -17,6 +17,6 @@ namespace Model
         public DbSet<SanPham> SanPham { get; set; }
         public DbSet<LoaiSanPham> LoaiSanPham { get; set; }
         public DbSet<SanPham> SanPhams { get; set; }
-        public DbSet<HinhAnhSanPham> HinhAnhSanPhams { get; set; }
+        public DbSet<HinhAnhSanPham> HinhAnhSanPham { get; set; }
     }
 }

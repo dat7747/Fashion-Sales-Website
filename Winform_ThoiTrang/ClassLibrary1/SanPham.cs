@@ -17,6 +17,6 @@ namespace Model
         public string NhaSanXuat { get; set; }
 
 
-        public ICollection<HinhAnhSanPham> HinhAnhSanPhams { get; set; }
+        public ICollection<HinhAnhSanPham> HinhAnhSanPham { get; set; }
     }
 }
