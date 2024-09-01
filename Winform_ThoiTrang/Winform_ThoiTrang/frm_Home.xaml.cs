@@ -2,6 +2,7 @@
 using Model;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -23,22 +24,81 @@ namespace Winform_ThoiTrang
     public partial class frm_Home : UserControl
     {
         private ApplicationDbContext _context;
+
         public frm_Home()
         {
             InitializeComponent();
-            var optionsBuider = new DbContextOptionsBuilder<ApplicationDbContext>();
-            optionsBuider.UseSqlServer("Server=DESKTOP-BSIJE74\\SQLEXPRESS;Database=LTD;User Id=sa;Password=123;TrustServerCertificate=True;");
-            _context = new ApplicationDbContext(optionsBuider.Options);
+            var optionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
+            optionsBuilder.UseSqlServer("Server=DESKTOP-BSIJE74\\SQLEXPRESS;Database=LTD;User Id=sa;Password=123;TrustServerCertificate=True;");
+            _context = new ApplicationDbContext(optionsBuilder.Options);
+            LoadLoaiSanPham();
             LoadProducts();
         }
 
-
-
-
-        //=======================Truy vấn==============================
-        private void LoadProducts()
+        // Xử lý sự kiện khi nhấp vào hình ảnh
+        private void Image_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            var products = _context.SanPhams.Include(p => p.HinhAnhSanPham).ToList();
+            var image = sender as Image;
+            var product = image.Tag as SanPham;
+
+            // Hiển thị cửa sổ chi tiết sản phẩm
+            var productDetailsWindow = new ProductDetails(product);
+            productDetailsWindow.ShowDialog();
+        }
+
+        private void LoaiSanPhamComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (LoaiSanPhamComboBox == null || LoaiSanPhamComboBox.SelectedItem == null)
+            {
+                Debug.WriteLine("LoaiSanPhamComboBox is null or no item selected.");
+                return;
+            }
+
+            var selectedLoaiSanPham = LoaiSanPhamComboBox.SelectedItem as dynamic;
+            int? selectedLoaiSanPhamID = selectedLoaiSanPham?.Id;
+
+            LoadProducts(selectedLoaiSanPhamID, SearchTextBox.Text);
+        }
+
+        private void SearchTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (LoaiSanPhamComboBox == null || LoaiSanPhamComboBox.SelectedItem == null)
+            {
+                Debug.WriteLine("LoaiSanPhamComboBox is null or no item selected.");
+                return;
+            }
+
+            var searchText = SearchTextBox.Text;
+            var selectedLoaiSanPham = LoaiSanPhamComboBox.SelectedItem as dynamic;
+            int? selectedLoaiSanPhamID = selectedLoaiSanPham?.Id;
+
+            LoadProducts(selectedLoaiSanPhamID, searchText);
+        }
+
+        private void CartIcon_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            CartView cartView  = new CartView();
+            cartView.ShowDialog();
+        }
+        //=======================Truy vấn==============================
+        private void LoadProducts(int? loaiSanPhamID = null, string searchText = "")
+        {
+            var productsQuery = _context.SanPhams.Include(p => p.HinhAnhSanPham).AsQueryable();
+
+            if (loaiSanPhamID.HasValue)
+            {
+                productsQuery = productsQuery.Where(p => p.LoaiSanPhamID == loaiSanPhamID.Value);
+            }
+
+            if (!string.IsNullOrWhiteSpace(searchText))
+            {
+                // Sử dụng EF.Functions.Like thay vì Contains để tránh lỗi
+                productsQuery = productsQuery.Where(p => EF.Functions.Like(p.TenSanPham, $"%{searchText}%"));
+            }
+
+            var products = productsQuery.ToList();
+
+            ProductsWrapPanel.Children.Clear(); // Clear existing products
 
             foreach (var product in products)
             {
@@ -64,8 +124,12 @@ namespace Winform_ThoiTrang
                     Source = productImage,
                     Height = 100,
                     Stretch = Stretch.Uniform,
-                    Margin = new Thickness(0, 0, 0, 5)
+                    Margin = new Thickness(0, 0, 0, 5),
+                    Tag = product // Gắn dữ liệu sản phẩm vào Tag
                 };
+
+                image.MouseLeftButtonUp += Image_MouseLeftButtonUp;
+
                 stackPanel.Children.Add(image);
 
                 var nameTextBlock = new TextBlock
@@ -94,47 +158,6 @@ namespace Winform_ThoiTrang
                 };
                 stackPanel.Children.Add(priceTextBlock);
 
-                var quantityPanel = new StackPanel
-                {
-                    Orientation = Orientation.Horizontal,
-                    HorizontalAlignment = HorizontalAlignment.Right,
-                    Margin = new Thickness(0, 10, 0, 0)
-                };
-
-                var decreaseButton = new Button
-                {
-                    Content = "-",
-                    FontSize = 20,
-                    Margin = new Thickness(0, 0, 5, 0),
-                    Width = 30,
-                    Tag = product.SanPhamID
-                };
-                decreaseButton.Click += DecreaseQuantity_Click;
-                quantityPanel.Children.Add(decreaseButton);
-
-                var quantityTextBlock = new TextBlock
-                {
-                    Text = "0", // Default quantity
-                    FontSize = 16,
-                    VerticalAlignment = VerticalAlignment.Center,
-                    Margin = new Thickness(0, 0, 5, 0),
-                    Tag = product.SanPhamID
-                };
-                quantityPanel.Children.Add(quantityTextBlock);
-
-                var increaseButton = new Button
-                {
-                    Content = "+",
-                    FontSize = 20,
-                    Width = 30,
-                    Tag = product.SanPhamID
-                };
-                increaseButton.Click += IncreaseQuantity_Click;
-                quantityPanel.Children.Add(increaseButton);
-
-                stackPanel.Children.Add(quantityPanel);
-
-                // Ensure that WrapPanel is used to contain productBorder
                 ProductsWrapPanel.Children.Add(productBorder);
             }
         }
@@ -155,26 +178,18 @@ namespace Winform_ThoiTrang
             }
         }
 
-        private void IncreaseQuantity_Click(object sender, RoutedEventArgs e)
+        private void LoadLoaiSanPham()
         {
-            var button = sender as Button;
-            var quantityTextBlock = (TextBlock)((StackPanel)button.Parent).Children[1];
-
-            if (int.TryParse(quantityTextBlock.Text, out int quantity))
+            var listLoaiSP = _context.LoaiSanPham.Select(lsp => new
             {
-                quantityTextBlock.Text = (quantity + 1).ToString();
-            }
-        }
+                Id = lsp.LoaiSanPhamID,
+                Name = lsp.TenLoai
+            }).ToList();
 
-        private void DecreaseQuantity_Click(object sender, RoutedEventArgs e)
-        {
-            var button = sender as Button;
-            var quantityTextBlock = (TextBlock)((StackPanel)button.Parent).Children[1];
-
-            if (int.TryParse(quantityTextBlock.Text, out int quantity) && quantity > 0)
-            {
-                quantityTextBlock.Text = (quantity - 1).ToString();
-            }
+            LoaiSanPhamComboBox.ItemsSource = listLoaiSP;
+            LoaiSanPhamComboBox.DisplayMemberPath = "Name";
+            LoaiSanPhamComboBox.SelectedValuePath = "Id";
         }
     }
+
 }

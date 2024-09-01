@@ -77,3 +77,7 @@ C:\FileNayChuBaiTap\Fashion-Sales-Website\Winform_ThoiTrang\Winform_ThoiTrang\ob
 C:\FileNayChuBaiTap\Fashion-Sales-Website\Winform_ThoiTrang\Winform_ThoiTrang\obj\Debug\net8.0-windows7.0\frm_AddProducts.g.cs
 C:\FileNayChuBaiTap\Fashion-Sales-Website\Winform_ThoiTrang\Winform_ThoiTrang\obj\Debug\net8.0-windows7.0\frm_EditProducts.baml
 C:\FileNayChuBaiTap\Fashion-Sales-Website\Winform_ThoiTrang\Winform_ThoiTrang\obj\Debug\net8.0-windows7.0\frm_EditProducts.g.cs
+C:\FileNayChuBaiTap\Fashion-Sales-Website\Winform_ThoiTrang\Winform_ThoiTrang\obj\Debug\net8.0-windows7.0\ProductDetails.baml
+C:\FileNayChuBaiTap\Fashion-Sales-Website\Winform_ThoiTrang\Winform_ThoiTrang\obj\Debug\net8.0-windows7.0\ProductDetails.g.cs
+C:\FileNayChuBaiTap\Fashion-Sales-Website\Winform_ThoiTrang\Winform_ThoiTrang\obj\Debug\net8.0-windows7.0\CartView.baml
+C:\FileNayChuBaiTap\Fashion-Sales-Website\Winform_ThoiTrang\Winform_ThoiTrang\obj\Debug\net8.0-windows7.0\CartView.g.cs

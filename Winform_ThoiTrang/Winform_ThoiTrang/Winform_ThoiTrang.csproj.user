@@ -7,6 +7,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="CartView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="frm_AddProducts.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -19,8 +22,14 @@
     <Compile Update="frm_Shoes.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="ProductDetails.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="CartView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="frm_AddProducts.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -34,6 +43,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ProductDetails.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
