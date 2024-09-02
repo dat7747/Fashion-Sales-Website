@@ -22,9 +22,9 @@
                 <!-- Thêm các loại sản phẩm khác ở đây -->
             </ComboBox>
             <Button x:Name="btn_Them" Content="Thêm" Click="btnThem_Click" Width="80" Margin="0,0,10,0" Background="#4CAF50" Foreground="White" BorderBrush="#4CAF50"/>
-            <Button x:Name="btn_Xoa" Content="Xóa" Width="80" Margin="0,0,10,0" Background="#f44336" Foreground="White" BorderBrush="#f44336"/>
+            <Button x:Name="btn_Xoa" Content="Xóa" Click="btnXoa_Click" Width="80" Margin="0,0,10,0" Background="#f44336" Foreground="White" BorderBrush="#f44336"/>
             <Button x:Name="btn_Sua" Content="Sửa" Width="80" Margin="0,0,10,0" Background="#FF9800" Foreground="White" BorderBrush="#FF9800"/>
-            <Button x:Name="btn_Luu" Content="Lưu" Width="80" Background="#2196F3" Foreground="White" BorderBrush="#2196F3"/>
+            <Button x:Name="btn_Luu" Content="Lưu" Click="btnLuu_Click" Width="80" Background="#2196F3" Foreground="White" BorderBrush="#2196F3"/>
         </StackPanel>
 
         <!-- Nội dung chính với TabControl -->
