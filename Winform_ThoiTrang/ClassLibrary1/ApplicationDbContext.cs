@@ -20,7 +20,7 @@ namespace Model
         public DbSet<HinhAnhSanPham> HinhAnhSanPham { get; set; }
         public DbSet<KhachHang> khachHangs { get; set; }
         public DbSet<CartItem> CartItem { get; set; }
-
+        public DbSet<Kho> Kho { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

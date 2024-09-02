@@ -14,6 +14,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Winform_ThoiTrang
 {
@@ -23,15 +24,17 @@ namespace Winform_ThoiTrang
     public partial class CartView : Window
     {
         private ApplicationDbContext _context;
+
         public CartView()
         {
+            InitializeComponent();
             var optionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
             optionsBuilder.UseSqlServer("Server=DESKTOP-BSIJE74\\SQLEXPRESS;Database=LTD;User Id=sa;Password=123;TrustServerCertificate=True;");
             _context = new ApplicationDbContext(optionsBuilder.Options);
-            InitializeComponent();
             LoadCartItems();
-
+            UpdateTotal();
         }
+
         private void RemoveItem_Click(object sender, RoutedEventArgs e)
         {
             var button = sender as Button;
@@ -43,7 +46,9 @@ namespace Winform_ThoiTrang
                 _context.SaveChanges();
                 LoadCartItems();
             }
+            UpdateTotal();
         }
+
         private void DecreaseQuantity_Click(object sender, RoutedEventArgs e)
         {
             var button = sender as Button;
@@ -55,6 +60,7 @@ namespace Winform_ThoiTrang
                 _context.SaveChanges();
                 LoadCartItems();
             }
+            UpdateTotal();
         }
 
         private void IncreaseQuantity_Click(object sender, RoutedEventArgs e)
@@ -68,31 +74,27 @@ namespace Winform_ThoiTrang
                 _context.SaveChanges();
                 LoadCartItems();
             }
+            UpdateTotal();
         }
 
         private void PaymentButton_Click(object sender, RoutedEventArgs e)
         {
             // Handle checkout logic here
         }
-
-        //==============================Truy vấn=============================
+        //===========================Truy vấn ==================================
         private void LoadCartItems()
         {
             try
             {
-                // Truy vấn các mục giỏ hàng với điều kiện KhachHangID có thể là NULL
                 var cartItems = _context.CartItem
                     .Include(c => c.SanPham)
-                    .Where(c => c.KhachHangID == 1) 
+                    .Where(c => c.KhachHangID == 1)
                     .ToList();
 
-                // Xóa các mục giỏ hàng hiện tại trên giao diện
                 CartItemsPanel.Children.Clear();
 
-                // Tạo và thêm các mục giỏ hàng vào giao diện
                 foreach (var item in cartItems)
                 {
-                    // Kiểm tra giá trị NULL cho thuộc tính SanPham
                     if (item.SanPham != null)
                     {
                         var cartItemControl = CreateCartItemControl(item);
@@ -102,32 +104,53 @@ namespace Winform_ThoiTrang
             }
             catch (Exception ex)
             {
-                // Ghi log lỗi hoặc xử lý lỗi
                 Console.WriteLine($"Lỗi khi tải các mục giỏ hàng: {ex.Message}");
             }
         }
+
         private void UpdateTotal()
         {
-            var total = _context.CartItem
-                                .Where(c => c.KhachHangID == null)
-                                .Sum(c => c.SanPham.Gia * c.SoLuong);
+            int khachHangID = 1;
 
-            // Assume there's a TextBlock for total amount in XAML with x:Name="TotalAmountText"
-            TotalPriceText.Text = $"{total:C}";
+            var totalPrice = _context.CartItem
+                .Where(ci => ci.KhachHangID == khachHangID)
+                .Sum(ci => ci.SoLuong * ci.SanPham.Gia); // Tính tổng giá trị
+
+            // Cập nhật giá trị tổng vào TotalPriceText
+            TotalPriceText.Text = $"{totalPrice:C}";
         }
+
         private UIElement CreateCartItemControl(CartItem item)
         {
-            // Xử lý giá trị NULL cho các thuộc tính sản phẩm
             var productName = item.SanPham?.TenSanPham ?? "Tên sản phẩm không có";
             var productSize = item.Size ?? "Không xác định";
             var productPrice = item.SanPham?.Gia ?? 0;
             var totalPrice = productPrice * item.SoLuong;
 
-            // Lấy hình ảnh đầu tiên từ tập hợp HinhAnhSanPham
-            var firstImage = item.SanPham?.HinhAnhSanPham?.FirstOrDefault();
-            var productImage = firstImage != null ? ByteArrayToBitmapImage(firstImage.HinhAnh) : null;
+            // Truy vấn để lấy hình ảnh đầu tiên của sản phẩm
+            var firstImage = _context.HinhAnhSanPham
+                .Where(h => h.SanPhamID == item.SanPhamID)
+                .Select(h => h.HinhAnh)
+                .FirstOrDefault();
 
-            // Tạo Border để bọc từng mục giỏ hàng
+            BitmapImage productImage = null;
+
+            if (firstImage != null)
+            {
+                try
+                {
+                    productImage = ByteArrayToBitmapImage(firstImage);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Lỗi chuyển đổi hình ảnh: {ex.Message}");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Không tìm thấy hình ảnh cho sản phẩm này.");
+            }
+
             var border = new Border
             {
                 Background = Brushes.White,
@@ -138,16 +161,15 @@ namespace Winform_ThoiTrang
                 BorderThickness = new Thickness(1)
             };
 
-            // Tạo Grid để sắp xếp các phần tử trong Border
             var grid = new Grid();
             grid.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Auto });
             grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
             grid.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Auto });
 
-            // Tạo Image để hiển thị hình ảnh sản phẩm
-            var image = new Image
+            // Hiển thị ảnh sản phẩm
+            var image = new System.Windows.Controls.Image
             {
-                Source = productImage, // Sử dụng BitmapImage đã chuyển đổi
+                Source = productImage,
                 Width = 100,
                 Height = 100,
                 Margin = new Thickness(0, 0, 10, 0),
@@ -156,7 +178,6 @@ namespace Winform_ThoiTrang
             };
             grid.Children.Add(image);
 
-            // Tạo StackPanel để chứa thông tin sản phẩm
             var stackPanel = new StackPanel();
             Grid.SetColumn(stackPanel, 1);
 
@@ -188,7 +209,6 @@ namespace Winform_ThoiTrang
             });
             grid.Children.Add(stackPanel);
 
-            // Tạo StackPanel để chứa các nút hành động (tăng giảm số lượng, xóa sản phẩm)
             var actionStackPanel = new StackPanel
             {
                 Orientation = Orientation.Horizontal,
@@ -197,7 +217,6 @@ namespace Winform_ThoiTrang
             };
             Grid.SetColumn(actionStackPanel, 2);
 
-            // Tạo StackPanel để chứa nút tăng giảm số lượng
             var quantityPanel = new StackPanel
             {
                 Orientation = Orientation.Horizontal,
@@ -241,12 +260,11 @@ namespace Winform_ThoiTrang
 
             actionStackPanel.Children.Add(quantityPanel);
 
-            // Tạo nút Xóa sản phẩm khỏi giỏ hàng
             var removeButton = new Button
             {
                 Content = "Xóa",
                 Width = 60,
-                Margin = new Thickness(0, 5, 0, 0),
+                Margin = new Thickness(10, 0, 0, 0),
                 Background = Brushes.Red,
                 Foreground = Brushes.White,
                 FontWeight = FontWeights.Bold,
@@ -258,28 +276,35 @@ namespace Winform_ThoiTrang
 
             grid.Children.Add(actionStackPanel);
 
-            // Đặt Grid vào trong Border
             border.Child = grid;
 
             return border;
         }
 
-        // Phương thức để chuyển đổi mảng byte thành BitmapImage
-        private BitmapImage ByteArrayToBitmapImage(byte[] byteArray)
+        private BitmapImage ByteArrayToBitmapImage(byte[] imageData)
         {
-            if (byteArray == null) return null;
+            if (imageData == null || imageData.Length == 0) return null;
 
-            using (var stream = new MemoryStream(byteArray))
+            try
             {
-                var bitmapImage = new BitmapImage();
-                bitmapImage.BeginInit();
-                bitmapImage.StreamSource = stream;
-                bitmapImage.CacheOption = BitmapCacheOption.OnLoad;
-                bitmapImage.EndInit();
-                bitmapImage.Freeze(); // Để ảnh có thể sử dụng trong nhiều thread nếu cần
-                return bitmapImage;
+                using (var ms = new MemoryStream(imageData))
+                {
+                    var bitmap = new BitmapImage();
+                    bitmap.BeginInit();
+                    bitmap.CacheOption = BitmapCacheOption.OnLoad;
+                    bitmap.StreamSource = ms;
+                    bitmap.EndInit();
+                    bitmap.Freeze(); // Để tránh lỗi truy cập đa luồng
+                    return bitmap;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi tạo BitmapImage: {ex.Message}");
+                return null;
             }
         }
 
     }
+
 }

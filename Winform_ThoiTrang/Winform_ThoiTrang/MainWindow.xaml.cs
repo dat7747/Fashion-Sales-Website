@@ -32,5 +32,10 @@ namespace Winform_ThoiTrang
         public void StoreMenuitem_Click(object sender, RoutedEventArgs e) {
             MainContent.Content = new frm_Home();
         }
+        public void WarehouseMenuItem_Click(Object sender, RoutedEventArgs e)
+        {
+            frm_Warehouse frm = new frm_Warehouse();
+            MainContent.Content = frm;
+        }
     }
 }

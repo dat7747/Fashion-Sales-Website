@@ -53,35 +53,37 @@ namespace Winform_ThoiTrang
         }
         private void AddToCart_Click(object sender, RoutedEventArgs e)
         {
-            var selectedSize = (SizeComboBox.SelectedItem as ComboBoxItem)?.Content.ToString();
+            var selectedSize = (SizeComboBox.SelectedItem as ComboBoxItem)?.Content.ToString() ?? "C"; 
+
             if (int.TryParse(QuantityTextBlock.Text, out int quantity) && quantity > 0)
             {
-                if (string.IsNullOrEmpty(selectedSize))
-                {
-                    var result = MessageBox.Show(
-                        "Bạn chưa chọn kích cỡ cho sản phẩm. Bạn có muốn thêm vào giỏ hàng không?",
-                        "Xác nhận",
-                        MessageBoxButton.YesNo,
-                        MessageBoxImage.Question
-                    );
+                // Không cần xác nhận khi không chọn kích cỡ, vì đã gán mặc định là "C"
+                var existingItem = _context.CartItem
+                    .FirstOrDefault(ci => ci.SanPhamID == _product.SanPhamID
+                                          && ci.KhachHangID == 1 // Giả sử ID khách hàng là 1
+                                          && ci.Size == selectedSize);
 
-                    if (result == MessageBoxResult.No)
-                    {
-                        return; // Không thêm vào giỏ hàng nếu người dùng chọn No
-                    }
+                if (existingItem != null)
+                {
+                    // Nếu sản phẩm đã có trong giỏ hàng, cập nhật số lượng
+                    existingItem.SoLuong += quantity;
                 }
-
-                var cartItem = new CartItem
+                else
                 {
-                    SanPhamID = _product.SanPhamID,
-                    KhachHangID = 1, // Nếu khách hàng chưa đăng nhập
-                    SoLuong = quantity,
-                    Size = selectedSize
-                };
+                    // Nếu sản phẩm chưa có trong giỏ hàng, thêm mới
+                    var cartItem = new CartItem
+                    {
+                        SanPhamID = _product.SanPhamID,
+                        KhachHangID = 1, // Nếu khách hàng chưa đăng nhập
+                        SoLuong = quantity,
+                        Size = selectedSize
+                    };
+
+                    _context.CartItem.Add(cartItem);
+                }
 
                 try
                 {
-                    _context.CartItem.Add(cartItem);
                     _context.SaveChanges();
                     MessageBox.Show("Đã thêm sản phẩm vào giỏ hàng!", "Thông báo", MessageBoxButton.OK);
                 }

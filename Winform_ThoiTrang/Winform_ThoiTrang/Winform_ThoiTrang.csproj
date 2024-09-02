@@ -17,6 +17,7 @@
     <None Remove="images\entryform.png" />
     <None Remove="images\handbag.png" />
     <None Remove="images\home.png" />
+    <None Remove="images\icon_kho.jpg" />
     <None Remove="images\logout.png" />
     <None Remove="images\manage.png" />
     <None Remove="images\settings.png" />
@@ -41,6 +42,7 @@
 
   <ItemGroup>
     <Resource Include="images\home.png" />
+    <Resource Include="images\icon_kho.jpg" />
     <Resource Include="images\logout.png" />
     <Resource Include="images\manage.png" />
     <Resource Include="images\settings.png" />

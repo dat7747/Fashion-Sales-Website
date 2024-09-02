@@ -56,36 +56,22 @@
                                     <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
-                                <Image Source="images/shoes.png" Width="16" Height="16" Grid.Column="0"/>
-                                <TextBlock Text="Shoes" VerticalAlignment="Center" Grid.Column="1" HorizontalAlignment="Left" Margin="5,0,0,0"/>
-                            </Grid>
-                        </DataTemplate>
-                    </MenuItem.HeaderTemplate>
-                </MenuItem>
-                <MenuItem>
-                    <MenuItem.HeaderTemplate>
-                        <DataTemplate>
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto"/>
-                                    <ColumnDefinition Width="*"/>
-                                </Grid.ColumnDefinitions>
-                                <Image Source="images/handbag.png" Width="16" Height="16" Grid.Column="0"/>
-                                <TextBlock Text="Handbag" VerticalAlignment="Center" Grid.Column="1" HorizontalAlignment="Left" Margin="5,0,0,0"/>
-                            </Grid>
-                        </DataTemplate>
-                    </MenuItem.HeaderTemplate>
-                </MenuItem>
-                <MenuItem>
-                    <MenuItem.HeaderTemplate>
-                        <DataTemplate>
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto"/>
-                                    <ColumnDefinition Width="*"/>
-                                </Grid.ColumnDefinitions>
                                 <Image Source="images/clothes.png" Width="16" Height="16" Grid.Column="0"/>
-                                <TextBlock Text="Clothes" VerticalAlignment="Center" Grid.Column="1" HorizontalAlignment="Left" Margin="5,0,0,0"/>
+                                <TextBlock Text="Products" VerticalAlignment="Center" Grid.Column="1" HorizontalAlignment="Left" Margin="5,0,0,0"/>
+                            </Grid>
+                        </DataTemplate>
+                    </MenuItem.HeaderTemplate>
+                </MenuItem>
+                <MenuItem Click="WarehouseMenuItem_Click">
+                    <MenuItem.HeaderTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="images/icon_kho.jpg" Width="16" Height="16" Grid.Column="0"/>
+                                <TextBlock Text="Warehouse" VerticalAlignment="Center" Grid.Column="1" HorizontalAlignment="Left" Margin="5,0,0,0"/>
                             </Grid>
                         </DataTemplate>
                     </MenuItem.HeaderTemplate>

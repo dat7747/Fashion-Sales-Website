@@ -4,7 +4,7 @@
         Title="Giỏ hàng" Height="600" Width="800">
     <DockPanel LastChildFill="True">
         <!-- ScrollViewer chứa danh sách sản phẩm -->
-        <ScrollViewer DockPanel.Dock="Top" VerticalScrollBarVisibility="Auto">
+        <ScrollViewer DockPanel.Dock="Top" VerticalScrollBarVisibility="Auto" Height="400">
             <StackPanel x:Name="CartItemsPanel" Margin="10">
                 <!-- Các mục giỏ hàng sẽ được thêm vào đây -->
             </StackPanel>
