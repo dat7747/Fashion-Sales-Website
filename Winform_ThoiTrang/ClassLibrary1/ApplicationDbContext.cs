@@ -49,6 +49,9 @@ namespace Model
                 .HasOne(c => c.KhachHang)
                 .WithMany()
                 .HasForeignKey(c => c.KhachHangID);
+            modelBuilder.Entity<Kho>()
+                .HasKey(k => new { k.SanPhamID, k.KichThuocID });
+
         }
 
     }

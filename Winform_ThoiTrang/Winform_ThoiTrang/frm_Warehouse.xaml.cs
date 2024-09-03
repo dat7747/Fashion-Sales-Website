@@ -26,10 +26,10 @@ namespace Winform_ThoiTrang
         private int selectedProductID;
         public frm_Warehouse()
         {
-            InitializeComponent();
             var optionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
             optionsBuilder.UseSqlServer("Server=DESKTOP-BSIJE74\\SQLEXPRESS;Database=LTD;User Id=sa;Password=123;TrustServerCertificate=True;");
             _context = new ApplicationDbContext(optionsBuilder.Options);
+            InitializeComponent();
             InitializeSizeComboBox();
         }
         private void btnThem_Click(object sender, RoutedEventArgs e)
@@ -66,6 +66,7 @@ namespace Winform_ThoiTrang
             var selectedProduct = (dynamic)InStockProductDataGrid.SelectedItem;
             if (selectedProduct != null)
             {
+                selectedProductID = selectedProduct.SanPhamID;
                 // Hiển thị thông tin sản phẩm đã chọn
                 InStockProductNameTextBox.Text = selectedProduct.TenSanPham;
                 InStockSizeComboBox.ItemsSource = GetAvailableSizes(); // Nạp dữ liệu cho ComboBox
@@ -135,15 +136,16 @@ namespace Winform_ThoiTrang
                 MessageBox.Show("Vui lòng chọn sản phẩm trước khi xóa.");
                 return;
             }
-
+            string kichThuocID = InStockSizeComboBox.SelectedItem?.ToString() + ",0";
             // Tìm sản phẩm trong kho với ID đã cho
-            var khoItem = _context.Kho.SingleOrDefault(k => k.SanPhamID == selectedProductID);
+            var khoItem = _context.Kho.SingleOrDefault(k => k.SanPhamID == selectedProductID && k.KichThuocID == kichThuocID);
             if (khoItem != null)
             {
                 _context.Kho.Remove(khoItem);
                 _context.SaveChanges();
                 MessageBox.Show("Xóa thành công sản phẩm.");
-                // Cập nhật DataGrid hoặc các thành phần khác nếu cần
+                LoadNotInStockProducts();
+                LoadInStockProducts();
             }
             else
             {
@@ -158,28 +160,45 @@ namespace Winform_ThoiTrang
                 return;
             }
 
-            // Lấy dữ liệu từ TextBox và ComboBox
-            string kichThuocID = InStockSizeComboBox.SelectedItem?.ToString();
+            string kichThuocID = InStockSizeComboBox.SelectedItem?.ToString() + ",0";
             int soLuong;
 
             if (int.TryParse(InStockQuantityTextBox.Text, out soLuong))
             {
-                // Kiểm tra nếu sản phẩm đã tồn tại trong kho
-                var khoItem = _context.Kho.SingleOrDefault(k => k.SanPhamID == selectedProductID && k.KichThuocID == kichThuocID);
+                // Kiểm tra xem sản phẩm đã tồn tại trong kho hay chưa
+                var khoItem = _context.Kho
+                    .Where(k => k.SanPhamID == selectedProductID && k.KichThuocID == kichThuocID)
+                    .FirstOrDefault();
 
                 if (khoItem != null)
                 {
-                    // Nếu tồn tại, cập nhật số lượng
+                    // Nếu đã tồn tại, cập nhật số lượng
                     khoItem.SoLuong = soLuong;
                     _context.Kho.Update(khoItem);
                 }
                 else
                 {
-                    themSPVaoKho();
+                    // Nếu không tồn tại, thêm mới sản phẩm vào kho
+                    khoItem = new Kho
+                    {
+                        SanPhamID = selectedProductID,
+                        KichThuocID = kichThuocID,
+                        SoLuong = soLuong
+                    };
+                    _context.Kho.Add(khoItem);
                 }
 
-                _context.SaveChanges();
-                MessageBox.Show("Lưu thành công.");
+                try
+                {
+                    _context.SaveChanges();
+                    MessageBox.Show("Lưu thành công.");
+                    LoadInStockProducts();
+                }
+                catch (DbUpdateException ex)
+                {
+                    MessageBox.Show("Có lỗi khi lưu dữ liệu: " + ex.Message);
+                }
+
                 // Cập nhật DataGrid hoặc các thành phần khác nếu cần
             }
             else
@@ -187,6 +206,9 @@ namespace Winform_ThoiTrang
                 MessageBox.Show("Số lượng không hợp lệ.");
             }
         }
+
+
+
         //==============Truy vấn========================
         //sản phẩm không có trong kho
         private void LoadNotInStockProducts()
@@ -214,6 +236,7 @@ namespace Winform_ThoiTrang
                                   join sp in _context.SanPham on kho.SanPhamID equals sp.SanPhamID
                                   select new
                                   {
+                                      kho.SanPhamID,
                                       sp.TenSanPham,
                                       kho.KichThuocID,
                                       kho.SoLuong
