@@ -5,6 +5,22 @@
       "PackagePath": "staticwebassets\\Web_ThoiTrang.bundle.scp.css"
     },
     {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\css\\Cart\\index.css",
+      "PackagePath": "staticwebassets\\css\\Cart\\index.css"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\css\\Login\\index.css",
+      "PackagePath": "staticwebassets\\css\\Login\\index.css"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\css\\Product\\detailproduct.css",
+      "PackagePath": "staticwebassets\\css\\Product\\detailproduct.css"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\css\\Product\\index.css",
+      "PackagePath": "staticwebassets\\css\\Product\\index.css"
+    },
+    {
       "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\css\\animate.css",
       "PackagePath": "staticwebassets\\css\\animate.css"
     },
@@ -183,6 +199,10 @@
     {
       "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\images\\loc.png",
       "PackagePath": "staticwebassets\\images\\loc.png"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\images\\logo_google.png",
+      "PackagePath": "staticwebassets\\images\\logo_google.png"
     },
     {
       "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\images\\person.jpg",

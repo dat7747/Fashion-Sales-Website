@@ -1,239 +1,64 @@
-﻿<!DOCTYPE html>
+﻿@model IEnumerable<dynamic> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Detail - Luxury Item</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f8f8;
-            color: #333;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-        }
-
-        .product-gallery {
-            flex: 1;
-            perspective: 1200px; /* Thay đổi độ sâu 3D */
-        }
-
-        .image-container {
-            width: 500px;
-            height: 500px;
-            position: relative;
-            transform-style: preserve-3d;
-            transform: rotateY(0deg); /* Khởi đầu không xoay */
-            transition: transform 1s;
-        }
-
-        .image {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 15px;
-            backface-visibility: hidden;
-        }
-
-        .image:nth-child(1) {
-            transform: rotateY(0deg) translateZ(250px); /* Đẩy ra phía trước */
-        }
-
-        .image:nth-child(2) {
-            transform: rotateY(120deg) translateZ(250px); /* Đẩy ra phía trước, xoay 120 độ */
-        }
-
-        .image:nth-child(3) {
-            transform: rotateY(240deg) translateZ(250px); /* Đẩy ra phía trước, xoay 240 độ */
-        }
-
-        @@keyframes rotate {
-            from {
-                transform: rotateY(0deg);
-            }
-            to {
-                transform: rotateY(-360deg);
-            }
-        }
-
-        .product-details {
-            flex: 1;
-            margin-left: 40px;
-            position: relative;
-        }
-
-        .product-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-
-        .product-title {
-            font-size: 36px;
-            font-weight: bold;
-        }
-
-        .cart-icon {
-            font-size: 24px;
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .cart-icon:hover {
-            background-color: #555;
-        }
-
-        .product-price {
-            font-size: 28px;
-            color: #B12704;
-            margin-bottom: 20px;
-        }
-
-        .product-size {
-            margin-bottom: 20px;
-        }
-
-        .product-size label {
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        .product-size select {
-            width: 100%;
-            padding: 10px;
-            font-size: 16px;
-            transition: border 0.3s;
-        }
-
-        .product-size select:hover {
-            border: 2px solid #000;
-        }
-
-        .product-description,
-        .product-material,
-        .product-origin {
-            margin-bottom: 20px;
-        }
-
-        .add-to-cart {
-            display: inline-block;
-            padding: 15px 30px;
-            background-color: #000;
-            color: #fff;
-            text-transform: uppercase;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-            transition: background-color 0.3s, transform 0.3s;
-        }
-
-        .add-to-cart:hover {
-            background-color: #333;
-            transform: scale(1.05);
-        }
-    </style>
+    <title>Product Listing</title>
+    <link href="~/css/product/index.css" rel="stylesheet" />
 </head>
 <body>
 
-    <div class="container">
-        <!-- Product Gallery -->
-        <div class="product-gallery">
-            <div class="image-container">
-                <img src="/images/clothes/test1.jpg" alt="Product Image 1" class="image">
-                <img src="/images/clothes/test2.jpg" alt="Product Image 2" class="image">
-                <img src="/images/clothes/test3.jpg" alt="Product Image 3" class="image">
-            </div>
+    <!-- Header section -->
+    <div class="header">
+        <!-- Home link (for triggering menu) -->
+        <div class="home-link" onclick="toggleMenu()">
+            <span style="font-weight:bold; color: #333; text-transform: uppercase">Home</span>
         </div>
 
-        <!-- Product Details -->
-        <div class="product-details">
-            <div class="product-header">
-                <h1 class="product-title">Luxury Handbag</h1>
-                <div class="cart-icon">
-                    🛒
-                </div>
-            </div>
-            <p class="product-price">$2,500.00</p>
+        <!-- Search bar in the center -->
+        <div class="menu-search">
+            <input type="search" placeholder="Search" />
+        </div>
 
-            <div class="product-size">
-                <label for="size">Size</label>
-                <select id="size">
-                    <option value="small">Small</option>
-                    <option value="medium">Medium</option>
-                    <option value="large">Large</option>
-                </select>
-            </div>
-
-            <div class="product-description">
-                <h3>Product Description</h3>
-                <p>Experience the elegance and sophistication with this exclusive luxury handbag. Crafted from premium materials, this handbag offers timeless style and unmatched quality.</p>
-            </div>
-
-            <div class="product-material">
-                <h3>Material</h3>
-                <p>High-quality leather</p>
-            </div>
-
-            <div class="product-origin">
-                <h3>Made in</h3>
-                <p>Italy</p>
-            </div>
-
-            <a href="#" class="add-to-cart">Add to Cart</a>
+        <!-- Icons on the right -->
+        <div class="icons">
+            <span>🛒</span>
         </div>
     </div>
-    <script>
-        const imageContainer = document.querySelector('.image-container');
-        let angle = 0;
-        const rotationStep = 120; // Mỗi bước xoay 120 độ
-        const rotationDuration = 3000; // Thời gian xoay qua mỗi ảnh (3 giây)
-        const pauseDuration = 2000; // Thời gian dừng lại (2 giây)
-        let isRotating = false; // Trạng thái xoay
 
-        function startRotation() {
-            isRotating = true;
-            // Xoay liên tục và dừng lại tại mỗi ảnh
-            const rotationInterval = setInterval(() => {
-                if (!isRotating) {
-                    clearInterval(rotationInterval); // Dừng xoay nếu không còn xoay
-                    return;
-                }
-                angle -= rotationStep; // Xoay ngược chiều kim đồng hồ
-                imageContainer.style.transition = `transform ${rotationDuration}ms`;
-                imageContainer.style.transform = `rotateY(${angle}deg)`;
-                setTimeout(() => {
-                    imageContainer.style.transition = `transform ${pauseDuration}ms`;
-                    setTimeout(() => {
-                        imageContainer.style.transition = '';
-                    }, pauseDuration);
-                }, rotationDuration);
-            }, rotationDuration + pauseDuration);
+    <!-- Menu section (hidden by default) -->
+    <div class="menu" id="menu">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/product/index">Website</a></li>
+            <li><a href="/home/product">Product</a></li>
+            <li><a href="/home/about">About</a></li>
+            <li><a href="/home/contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Product list section -->
+    <div class="product-list">
+        @foreach (var sp in Model)
+        {
+            <div class="product-item">
+                <a href="@Url.Action("DetailProduct", "Product", new { id = sp.SanPhamID })">
+                    <img src="data:image/png;base64,@(Convert.ToBase64String(sp.HinhAnhDaiDien ?? new byte[0]))" alt="@sp.TenSanPham" />
+                    <h3>@sp.TenSanPham</h3>
+                    <p>@sp.Gia.ToString("C")</p>
+                </a>
+            </div>
         }
+    </div>
 
-        imageContainer.addEventListener('click', () => {
-            if (isRotating) {
-                isRotating = false; // Dừng quay nếu đang quay
-            } else {
-                startRotation(); // Bắt đầu quay nếu chưa quay
-            }
-        });
+    <!-- JavaScript to toggle the menu -->
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('active');
+        }
     </script>
-
 
 </body>
 </html>

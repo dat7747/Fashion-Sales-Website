@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="~/css/login/index.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <h2>Login</h2>
+            <form action="#" method="POST">
+                <div class="input-box">
+                    <input type="text" required>
+                    <label>Username</label>
+                </div>
+                <div class="input-box">
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+                <button type="submit" class="login-btn">Login</button>
+
+                <div class="social-login">
+                    <p>Or login with</p>
+                    <button type="button" class="social-btn google-btn" onclick="document.getElementById('googleLogin').submit();">
+                        <img src="~/images/logo_google.png" alt="Google Logo">
+                        Google
+                    </button>
+
+                    <button class="social-btn facebook-btn">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Logo">
+                        Facebook
+                    </button>
+                </div>
+
+                <div class="bottom-text">
+                    <p>Don't have an account? <a href="#">Sign up</a></p>
+                </div>
+            </form>
+            <form id="googleLogin" action="/Login/GoogleLogin" method="post"></form>
+        </div>
+    </div>
+</body>
+</html>

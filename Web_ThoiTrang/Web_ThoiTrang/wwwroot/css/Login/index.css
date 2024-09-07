@@ -1,0 +1,159 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+    .login-box h2 {
+        color: #fff;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+.input-box {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+    .input-box input {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 16px;
+        color: #fff;
+        margin-bottom: 30px;
+        border: none;
+        border-bottom: 2px solid #fff;
+        background: transparent;
+        outline: none;
+    }
+
+    .input-box label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 16px;
+        color: #fff;
+        pointer-events: none;
+        transition: 0.5s;
+    }
+
+    .input-box input:focus ~ label,
+    .input-box input:valid ~ label {
+        top: -20px;
+        left: 0;
+        color: #03a9f4;
+        font-size: 12px;
+    }
+
+.login-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: #03a9f4;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+    .login-btn:hover {
+        background: #0288d1;
+    }
+
+.social-login {
+    text-align: center;
+    margin: 20px 0;
+}
+
+    .social-login p {
+        color: #fff;
+        margin-bottom: 10px;
+    }
+
+.social-btn {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.google-btn {
+    background-color: #db4437;
+    color: #fff;
+}
+
+    .google-btn img {
+        width: 20px;
+        margin-right: 10px;
+    }
+
+.facebook-btn {
+    background-color: #4267B2;
+    color: #fff;
+}
+
+    .facebook-btn img {
+        width: 20px;
+        margin-right: 10px;
+    }
+
+.google-btn:hover {
+    background-color: #c23321;
+}
+
+.facebook-btn:hover {
+    background-color: #365899;
+}
+
+.bottom-text {
+    text-align: center;
+    margin-top: 20px;
+}
+
+    .bottom-text p {
+        color: #fff;
+    }
+
+    .bottom-text a {
+        color: #03a9f4;
+        text-decoration: none;
+    }
+
+        .bottom-text a:hover {
+            text-decoration: underline;
+        }

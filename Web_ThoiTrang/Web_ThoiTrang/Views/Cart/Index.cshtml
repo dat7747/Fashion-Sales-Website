@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="~/css/cart/index.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+</head>
+<body>
+    <div class="cart-container">
+        <h1 class="cart-title">Shopping Cart</h1>
+        <div class="cart-items">
+            <div class="cart-item">
+                <img src="https://via.placeholder.com/100" alt="Product Image" class="item-image">
+                <div class="item-details">
+                    <h2 class="item-name">Product Name</h2>
+                    <p class="item-price">$100.00</p>
+                    <p class="item-size">Size: M</p>
+                </div>
+                <div class="item-quantity">
+                    <button class="quantity-btn" id="decrease-quantity-1">-</button>
+                    <input type="number" id="quantity-1" value="1" min="1" readonly>
+                    <button class="quantity-btn" id="increase-quantity-1">+</button>
+                </div>
+                <button class="remove-btn">Remove</button>
+            </div>
+            <!-- Repeat for more items -->
+        </div>
+        <div class="cart-summary">
+            <p class="summary-label">Total:</p>
+            <p class="summary-total">$100.00</p>
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.quantity-btn').forEach(btn => {
+            btn.addEventListener('click', function () {
+                const quantityInput = this.parentElement.querySelector('input');
+                let quantity = parseInt(quantityInput.value);
+                if (this.id.includes('increase')) {
+                    quantity++;
+                } else if (this.id.includes('decrease') && quantity > 1) {
+                    quantity--;
+                }
+                quantityInput.value = quantity;
+                // Update total price logic here
+            });
+        });
+    </script>
+</body>
+</html>

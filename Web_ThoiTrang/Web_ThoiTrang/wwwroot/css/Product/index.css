@@ -1,0 +1,129 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: white;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.home-link {
+    cursor: pointer;
+}
+
+.menu-search {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+    .menu-search input[type="search"] {
+        padding: 8px;
+        font-size: 14px;
+        border: 1px solid #e1e1e1;
+        border-radius: 20px;
+        width: 50%;
+    }
+
+.icons {
+    font-size: 24px;
+}
+
+/* Menu items styling with dropdown effect */
+.menu {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    transform: translateY(-50px); /* Initially hide above */
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+    .menu.active {
+        transform: translateY(0); /* Slide down to position */
+        opacity: 1;
+    }
+
+    .menu ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        gap: 30px;
+    }
+
+        .menu ul li {
+            display: inline-block;
+        }
+
+            .menu ul li a {
+                text-decoration: none;
+                color: #333;
+                font-size: 18px;
+                font-weight: bold;
+                color: #333;
+                text-transform: uppercase;
+                transition: color 0.3s;
+            }
+
+                .menu ul li a:hover {
+                    color: #B12704;
+                }
+
+/* Product list styling */
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.product-item {
+    flex-basis: 23%; /* Ensures 4 products per row */
+    border: 1px solid #e1e1e1;
+    padding: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .product-item img {
+        width: 100%;
+        height: auto;
+        max-height: 200px;
+        object-fit: cover;
+    }
+
+    .product-item h3 {
+        font-size: 18px;
+        margin: 10px 0;
+    }
+
+    .product-item p {
+        font-size: 16px;
+        color: #FF5722; /* Thay màu giá sản phẩm ở đây */
+    }
+
+    /* Style for links within product items */
+    .product-item a {
+        color: black; /* Đổi màu chữ thành đen */
+        text-decoration: none; /* Loại bỏ gạch chân */
+    }
+
+        .product-item a:hover {
+            text-decoration: underline; /* Thêm gạch chân khi di chuột qua, nếu cần */
+        }
+
+    /* Hover effect on product items */
+    .product-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
