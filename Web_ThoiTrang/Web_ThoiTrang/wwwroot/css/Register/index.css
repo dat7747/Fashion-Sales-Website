@@ -1,0 +1,115 @@
+﻿/* CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.register-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 300px;
+    backdrop-filter: blur(10px);
+    animation: fadeIn 1s ease-in-out;
+}
+
+    .register-box h2 {
+        color: white;
+        margin-bottom: 20px;
+    }
+
+.input-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+    .input-box input {
+        width: 100%;
+        padding: 10px 30px;
+        background: transparent;
+        border: 2px solid white;
+        color: white;
+        border-radius: 25px;
+        outline: none;
+    }
+
+    .input-box i {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: white;
+    }
+
+.register-btn {
+    background: #2575fc;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+    .register-btn:hover {
+        background: #6a11cb;
+    }
+
+.social-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+    .social-buttons button {
+        background: white;
+        color: #2575fc;
+        border: none;
+        padding: 10px;
+        border-radius: 25px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        transition: transform 0.3s;
+    }
+
+        .social-buttons button i {
+            margin-right: 10px;
+        }
+
+        .social-buttons button:hover {
+            transform: scale(1.1);
+        }
+
+/* Keyframes for animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

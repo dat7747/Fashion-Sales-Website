@@ -67,7 +67,6 @@
 
 </head>
 <body>
-
 	<nav id="fh5co-main-nav" role="navigation">
 		<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle active"><i></i></a>
 		<div class="js-fullheight fh5co-table">
@@ -78,7 +77,14 @@
 					<li><a href="/home/product">Product</a></li>
 					<li><a href="/home/about">About</a></li>
 					<li><a href="/home/contact">Contact</a></li>
-					<li><a href="/Login/index">Account</a></li>
+					@if (User.Identity.IsAuthenticated)
+					{
+						<li><a href="/Customer/index">Customer</a></li>
+					}
+					else
+					{
+						<li><a href="/Login/index">Account</a></li>
+					}
 				</ul>
 				<p class="fh5co-social-icon">
 					<a href="#"><i class="icon-twitter2"></i></a>

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "sNpHZJ/gY7e2xrk86cTaJnq2SRNsACxBRMJ/7CvvhjA=",
+  "Hash": "Npmcc3p5bYVpZi+14WSr4a3Knsyse2orvUpGja2RNro=",
   "Source": "Web_ThoiTrang",
   "BasePath": "_content/Web_ThoiTrang",
   "Mode": "Default",
@@ -224,6 +224,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\Product\\index.css"
+    },
+    {
+      "Identity": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\css\\Register\\index.css",
+      "SourceId": "Web_ThoiTrang",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\",
+      "BasePath": "_content/Web_ThoiTrang",
+      "RelativePath": "css/Register/index.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Register\\index.css"
     },
     {
       "Identity": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\css\\style.css",

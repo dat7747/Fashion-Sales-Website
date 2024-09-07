@@ -257,3 +257,4 @@ C:\FileNayChuBaiTap\Fashion-Sales-Website\Web_ThoiTrang\Web_ThoiTrang\bin\Debug\
 C:\FileNayChuBaiTap\Fashion-Sales-Website\Web_ThoiTrang\Web_ThoiTrang\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.Google.dll
 C:\FileNayChuBaiTap\Fashion-Sales-Website\Web_ThoiTrang\Web_ThoiTrang\bin\Debug\net8.0\System.Management.dll
 C:\FileNayChuBaiTap\Fashion-Sales-Website\Web_ThoiTrang\Web_ThoiTrang\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Management.dll
+C:\FileNayChuBaiTap\Fashion-Sales-Website\Web_ThoiTrang\Web_ThoiTrang\bin\Debug\net8.0\BCrypt.Net-Next.dll

@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="~/css/register/index.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="register-container">
+        <div class="register-box">
+            <h2>Create an Account</h2>
+            <form asp-action="Index" method="POST">
+                <div class="input-box">
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="HoTen" required placeholder="Username">
+                </div>
+                <div class="input-box">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" name="Email" required placeholder="Email">
+                </div>
+                <div class="input-box">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" name="Password" required placeholder="Password">
+                </div>
+                <button type="submit" class="register-btn">Register</button>
+                <p>Or register with:</p>
+                <div class="social-buttons">
+                    <a href="/Register/ExternalLogin?provider=Facebook" class="facebook-btn">
+                        <i class="fab fa-facebook-f"></i> Facebook
+                    </a>
+                    <a href="/Register/ExternalLogin?provider=Google" class="google-btn">
+                        <i class="fab fa-google"></i> Google
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
