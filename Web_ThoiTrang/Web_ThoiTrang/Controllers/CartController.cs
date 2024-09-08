@@ -19,7 +19,7 @@ namespace Web_ThoiTrang.Controllers
 
             if (customer == null)
             {
-                return Unauthorized(); // Trả về nếu người dùng chưa đăng nhập
+                return RedirectToAction("Index", "Login");
             }
 
             // Truy vấn các mục giỏ hàng dựa trên KhachHangID từ bảng CartItem
@@ -42,7 +42,6 @@ namespace Web_ThoiTrang.Controllers
 
             return View(cartItems);
         }
-
 
         [HttpPost]
         public async Task<IActionResult> AddToCart(int sanPhamId, int soLuong, string size)

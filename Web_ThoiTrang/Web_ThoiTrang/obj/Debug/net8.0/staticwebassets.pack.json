@@ -5,8 +5,16 @@
       "PackagePath": "staticwebassets\\Web_ThoiTrang.bundle.scp.css"
     },
     {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\css\\Cart\\header.css",
+      "PackagePath": "staticwebassets\\css\\Cart\\header.css"
+    },
+    {
       "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\css\\Cart\\index.css",
       "PackagePath": "staticwebassets\\css\\Cart\\index.css"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\css\\Customer\\index.css",
+      "PackagePath": "staticwebassets\\css\\Customer\\index.css"
     },
     {
       "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\css\\Login\\index.css",
@@ -17,8 +25,16 @@
       "PackagePath": "staticwebassets\\css\\Product\\detailproduct.css"
     },
     {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\css\\Product\\iconcart.css",
+      "PackagePath": "staticwebassets\\css\\Product\\iconcart.css"
+    },
+    {
       "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\css\\Product\\index.css",
       "PackagePath": "staticwebassets\\css\\Product\\index.css"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\css\\Product\\list_Product.css",
+      "PackagePath": "staticwebassets\\css\\Product\\list_Product.css"
     },
     {
       "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\css\\Register\\index.css",
@@ -235,6 +251,10 @@
     {
       "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\js\\Cart\\quantity.js",
       "PackagePath": "staticwebassets\\js\\Cart\\quantity.js"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\js\\Product\\update_total_iconcart.js",
+      "PackagePath": "staticwebassets\\js\\Product\\update_total_iconcart.js"
     },
     {
       "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\js\\bootstrap.min.js",

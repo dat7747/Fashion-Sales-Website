@@ -1,0 +1,71 @@
+﻿/* Section title styling */
+.section-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 30px 0;
+    color: #333;
+    position: relative;
+}
+
+    .section-title::before {
+        content: "";
+        display: block;
+        width: 80px;
+        height: 4px;
+        background-color: #B12704;
+        margin: 10px auto;
+        border-radius: 2px;
+    }
+
+/* Product list styling */
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.product-item {
+    border: 1px solid #e1e1e1;
+    padding: 15px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box; /* Ensures padding and border are included in width */
+}
+
+    .product-item img {
+        width: 100%;
+        height: auto;
+        max-height: 200px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .product-item h3 {
+        font-size: 18px;
+        margin: 10px 0;
+    }
+
+    .product-item p {
+        font-size: 16px;
+        color: #FF5722; /* Color for product price */
+    }
+
+    /* Style for links within product items */
+    .product-item a {
+        color: black; /* Change text color to black */
+        text-decoration: none; /* Remove underline */
+    }
+
+        .product-item a:hover {
+            text-decoration: underline; /* Add underline on hover */
+        }
+
+    /* Hover effect on product items */
+    .product-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }

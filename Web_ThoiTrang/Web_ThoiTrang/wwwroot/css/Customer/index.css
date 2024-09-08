@@ -1,0 +1,111 @@
+﻿body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+header {
+    background-color: #4a90e2;
+    color: white;
+    padding: 1.5em 2em;
+    text-align: center;
+}
+
+    header h1 {
+        margin: 0;
+        font-size: 2em;
+    }
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 1em 0 0;
+}
+
+    nav ul li {
+        display: inline;
+        margin: 0 15px;
+    }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+
+            nav ul li a:hover {
+                text-decoration: underline;
+            }
+
+form button {
+    background: #e94e77;
+    border: none;
+    color: white;
+    padding: 0.5em 1.2em;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    form button:hover {
+        background-color: #c43c6b;
+    }
+
+main {
+    padding: 2em;
+    max-width: 800px;
+    margin: 2em auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    border-bottom: 2px solid #4a90e2;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+    font-size: 1.5em;
+    color: #4a90e2;
+}
+
+.info-container, .actions-container {
+    margin-bottom: 2em;
+}
+
+.info-item {
+    margin-bottom: 1em;
+    padding: 1em;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.label {
+    font-weight: bold;
+    display: inline-block;
+    width: 150px;
+}
+
+.value {
+    font-size: 1.1em;
+}
+
+.actions-container .button {
+    display: inline-block;
+    padding: 0.75em 1.5em;
+    margin: 0.5em;
+    background-color: #4a90e2;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+    .actions-container .button:hover {
+        background-color: #357abd;
+    }

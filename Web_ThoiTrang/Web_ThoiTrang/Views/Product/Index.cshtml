@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Listing</title>
     <link href="~/css/product/index.css" rel="stylesheet" />
+    <link href="~/css/product/iconcart.css" rel="stylesheet" />
+    <link href="~/css/product/list_product.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="~/js/product/update_total_iconcart.js"></script>
 </head>
 <body>
 
@@ -18,12 +22,13 @@
 
         <!-- Search bar in the center -->
         <div class="menu-search">
-            <input type="search" placeholder="Search" />
+            <input type="search" id="search-input" placeholder="Search" />
         </div>
 
         <!-- Icons on the right -->
-        <div class="icons">
+        <div class="icons" onclick="window.location.href='/Cart/Index'">
             <span>🛒</span>
+            <span id="cart-item-count" class="cart-count">0</span>
         </div>
     </div>
 
@@ -37,9 +42,10 @@
             <li><a href="/home/contact">Contact</a></li>
         </ul>
     </div>
-
+    <h2 class="section-title">Clothes</h2>
     <!-- Product list section -->
-    <div class="product-list">
+    <!-- Product list section -->
+    <div class="product-list" id="product-list">
         @foreach (var sp in Model)
         {
             <div class="product-item">
@@ -52,6 +58,7 @@
         }
     </div>
 
+
     <!-- JavaScript to toggle the menu -->
     <script>
         function toggleMenu() {
@@ -59,6 +66,49 @@
             menu.classList.toggle('active');
         }
     </script>
+    <script>
+        $(document).ready(function () {
+            $('#search-input').on('input', function () {
+                var query = $(this).val();
 
+                $.ajax({
+                    url: '/Product/Search',
+                    type: 'GET',
+                    data: { searchTerm: query },
+                    success: function (data) {
+                        renderProductList(data); // Hiển thị kết quả tìm kiếm
+                    },
+                    error: function (xhr, status, error) {
+                        console.log('Error occurred while fetching search results:', error);
+                    }
+                });
+            });
+            function renderProductList(data) {
+                var productList = $('.product-list');
+                productList.empty(); // Xóa danh sách sản phẩm cũ
+
+                if (data.length === 0) {
+                    productList.append('<p>Không có sản phẩm nào được tìm thấy.</p>');
+                } else {
+                    $.each(data, function (index, item) {
+                        var productItem = $('<div>').addClass('product-item');
+                        var productLink = $('<a>').attr('href', '/Product/DetailProduct?id=' + item.sanPhamID);
+
+                        // Tạo ảnh từ chuỗi Base64
+                        var productImage = $('<img>').attr('src', 'data:image/png;base64,' + item.hinhAnhDaiDien)
+                            .attr('alt', item.tenSanPham);
+
+                        var productName = $('<h3>').text(item.tenSanPham);
+                        var productPrice = $('<p>').text(item.gia); // Hiển thị giá đã được định dạng và có "₫"
+
+                        productLink.append(productImage, productName, productPrice);
+                        productItem.append(productLink);
+                        productList.append(productItem);
+                    });
+                }
+            }
+        });
+
+    </script>
 </body>
 </html>

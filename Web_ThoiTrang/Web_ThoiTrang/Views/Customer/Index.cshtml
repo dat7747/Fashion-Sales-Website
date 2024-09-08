@@ -1,13 +1,61 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Test</title>
+    <meta charset="UTF-8">
+    <link href="~/css/customer/index.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông Tin Khách Hàng</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="~/css/customer/index.css" rel="stylesheet" />
 </head>
 <body>
-    <h2>Test</h2>
-    <form id="logout-form" action="/login/logout" method="post">
-        <button type="submit">Logout</button>
-    </form>
+    <!-- Header -->
+    <header>
+        <h1>Thông Tin Khách Hàng</h1>
+        <nav>
+            <ul>
+                <li><a href="#history"><i class="fas fa-history"></i> Xem Lịch Sử Mua Hàng</a></li>
+                <li><a href="#update"><i class="fas fa-user-edit"></i> Cập Nhật Tài Khoản</a></li>
+                <li>
+                    <form id="logout-form" action="/login/logout" method="post">
+                        <button type="submit"><i class="fas fa-sign-out-alt"></i> Đăng Xuất</button>
+                    </form>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section id="info">
+            <h2>Thông Tin Cá Nhân</h2>
+            <div class="info-container">
+                <div class="info-item">
+                    <span class="label">Họ tên:</span>
+                    <span class="value" id="fullName">Nguyễn Văn A</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Email:</span>
+                    <span class="value" id="email">nguyenvana@example.com</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Số Điện Thoại:</span>
+                    <span class="value" id="phone">0123456789</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Địa chỉ:</span>
+                    <span class="value" id="address">123 Đường ABC, Quận 1, TP.HCM</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="actions">
+            <h2>Các Chức Năng</h2>
+            <div class="actions-container">
+                <a href="/history" class="button"><i class="fas fa-history"></i> Xem Lịch Sử Mua Hàng</a>
+                <a href="/update" class="button"><i class="fas fa-user-edit"></i> Cập Nhật Tài Khoản</a>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
