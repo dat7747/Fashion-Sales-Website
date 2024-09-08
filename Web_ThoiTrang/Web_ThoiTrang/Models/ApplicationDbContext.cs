@@ -9,5 +9,6 @@ namespace Web_ThoiTrang.Models
         public DbSet<SanPham> SanPham { get; set; }
         public DbSet<HinhAnhSanPham> HinhAnhSanPham { get; set; }
         public DbSet<KhachHang> KhachHang { get; set; }
-    }
+		public DbSet<CartItem> CartItem { get; set; }
+	}
 }

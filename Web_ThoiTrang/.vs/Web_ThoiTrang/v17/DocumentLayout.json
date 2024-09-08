@@ -1,88 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{CC373C78-C9EA-47BA-B477-A716B51181A1}|Web_ThoiTrang\\Web_ThoiTrang.csproj|c:\\filenaychubaitap\\fashion-sales-website\\web_thoitrang\\web_thoitrang\\views\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CC373C78-C9EA-47BA-B477-A716B51181A1}|Web_ThoiTrang\\Web_ThoiTrang.csproj|solutionrelative:web_thoitrang\\views\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC373C78-C9EA-47BA-B477-A716B51181A1}|Web_ThoiTrang\\Web_ThoiTrang.csproj|c:\\filenaychubaitap\\fashion-sales-website\\web_thoitrang\\web_thoitrang\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC373C78-C9EA-47BA-B477-A716B51181A1}|Web_ThoiTrang\\Web_ThoiTrang.csproj|solutionrelative:web_thoitrang\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC373C78-C9EA-47BA-B477-A716B51181A1}|Web_ThoiTrang\\Web_ThoiTrang.csproj|c:\\filenaychubaitap\\fashion-sales-website\\web_thoitrang\\web_thoitrang\\views\\product\\detailproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CC373C78-C9EA-47BA-B477-A716B51181A1}|Web_ThoiTrang\\Web_ThoiTrang.csproj|solutionrelative:web_thoitrang\\views\\product\\detailproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC373C78-C9EA-47BA-B477-A716B51181A1}|Web_ThoiTrang\\Web_ThoiTrang.csproj|c:\\filenaychubaitap\\fashion-sales-website\\web_thoitrang\\web_thoitrang\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC373C78-C9EA-47BA-B477-A716B51181A1}|Web_ThoiTrang\\Web_ThoiTrang.csproj|solutionrelative:web_thoitrang\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 2,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DetailProduct.cshtml",
-              "DocumentMoniker": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\Views\\Product\\DetailProduct.cshtml",
-              "RelativeDocumentMoniker": "Web_ThoiTrang\\Views\\Product\\DetailProduct.cshtml",
-              "ToolTip": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\Views\\Product\\DetailProduct.cshtml",
-              "RelativeToolTip": "Web_ThoiTrang\\Views\\Product\\DetailProduct.cshtml",
-              "ViewState": "AQIAACEAAAAAAAAAAAAAwC8AAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-07T15:41:44.872Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ProductController.cs",
-              "DocumentMoniker": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\Controllers\\ProductController.cs",
-              "RelativeDocumentMoniker": "Web_ThoiTrang\\Controllers\\ProductController.cs",
-              "ToolTip": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\Controllers\\ProductController.cs",
-              "RelativeToolTip": "Web_ThoiTrang\\Controllers\\ProductController.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAYwB4AAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-07T15:41:39.502Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\Views\\Cart\\Index.cshtml",
-              "RelativeDocumentMoniker": "Web_ThoiTrang\\Views\\Cart\\Index.cshtml",
-              "ToolTip": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\Views\\Cart\\Index.cshtml",
-              "RelativeToolTip": "Web_ThoiTrang\\Views\\Cart\\Index.cshtml",
-              "ViewState": "AQIAABoAAAAAAAAAAAAAwBwAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-07T15:41:19.701Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CartController.cs",
-              "DocumentMoniker": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\Controllers\\CartController.cs",
-              "RelativeDocumentMoniker": "Web_ThoiTrang\\Controllers\\CartController.cs",
-              "ToolTip": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\Controllers\\CartController.cs",
-              "RelativeToolTip": "Web_ThoiTrang\\Controllers\\CartController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-07T15:41:16.031Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

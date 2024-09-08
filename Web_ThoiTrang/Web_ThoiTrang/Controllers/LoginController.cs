@@ -39,7 +39,6 @@ namespace Web_ThoiTrang.Controllers
 
                 if (result?.Principal != null)
                 {
-                    // Lấy thông tin người dùng từ Google
                     var email = result.Principal.FindFirst(claim => claim.Type == System.Security.Claims.ClaimTypes.Email)?.Value;
                     var name = result.Principal.FindFirst(claim => claim.Type == System.Security.Claims.ClaimTypes.Name)?.Value;
 
@@ -52,25 +51,31 @@ namespace Web_ThoiTrang.Controllers
                         var hashedPassword = BCrypt.Net.BCrypt.HashPassword(defaultPassword);
 
                         // Tạo khách hàng mới
-                        var khachHang = new KhachHang
+                        var newCustomer = new KhachHang
                         {
                             HoTen = name,
                             Email = email,
                             Password = hashedPassword, // Lưu mật khẩu đã mã hóa
                             NgayTao = DateTime.Now
                         };
-                        _context.KhachHang.Add(khachHang);
+                        _context.KhachHang.Add(newCustomer);
                         await _context.SaveChangesAsync();
+
+                        // Lưu ID khách hàng mới vào biến existingCustomer
+                        existingCustomer = newCustomer;
                     }
 
-                    // Chuyển hướng tới trang chính sau khi đăng nhập thành công
+                    // Lưu ID khách hàng vào session
+                    HttpContext.Session.SetInt32("CustomerId", existingCustomer.KhachHangID);
+
                     return RedirectToAction("Index", "Home");
                 }
 
                 return RedirectToAction("Index");
             }
-			// Phương thức để đăng xuất
-			[HttpPost]
+
+            // Phương thức để đăng xuất
+            [HttpPost]
 			public async Task<IActionResult> Logout()
 			{
 				await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);

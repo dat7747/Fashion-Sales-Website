@@ -1,51 +1,102 @@
-﻿<!DOCTYPE html>
+﻿@model IEnumerable<CartItemViewModel>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href="~/css/cart/index.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Cart</title>
+    <link href="~/css/cart/index.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="~/js/cart/quantity.js"></script>
+    <script src="~/js/cart/deleteproductincart.js"></script>
+    <style>
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* Đẩy nút Back và tiêu đề về hai đầu */
+            margin-bottom: 20px; /* Khoảng cách dưới tiêu đề */
+        }
+
+        .back-btn {
+            display: inline-block;
+            font-size: 16px;
+            color: #007bff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            border: 1px solid #007bff;
+            background-color: #fff;
+            transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            cursor: pointer;
+            /* Thêm animation cho hiệu ứng phóng to và bóng đổ */
+        }
+
+            .back-btn:hover {
+                background-color: #007bff;
+                color: #fff;
+                transform: scale(1.1); /* Phóng to nút khi hover */
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Thêm bóng đổ khi hover */
+                animation: pulse 0.6s infinite; /* Thêm hiệu ứng pulse */
+            }
+
+/* Hiệu ứng pulse cho nút */
+        @@keyframes pulse {
+            0% {
+                transform: scale(1.1);
+            }
+
+            50% {
+                transform: scale(1.15);
+            }
+
+            100% {
+                transform: scale(1.1);
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="cart-container">
-        <h1 class="cart-title">Shopping Cart</h1>
+        <div class="header">
+            <a href="/product/index" class="back-btn">Back</a>
+            <h1 class="cart-title">Shopping Cart</h1>
+        </div>
         <div class="cart-items">
-            <div class="cart-item">
-                <img src="https://via.placeholder.com/100" alt="Product Image" class="item-image">
-                <div class="item-details">
-                    <h2 class="item-name">Product Name</h2>
-                    <p class="item-price">$100.00</p>
-                    <p class="item-size">Size: M</p>
-                </div>
-                <div class="item-quantity">
-                    <button class="quantity-btn" id="decrease-quantity-1">-</button>
-                    <input type="number" id="quantity-1" value="1" min="1" readonly>
-                    <button class="quantity-btn" id="increase-quantity-1">+</button>
-                </div>
-                <button class="remove-btn">Remove</button>
-            </div>
-            <!-- Repeat for more items -->
+            @if (Model != null && Model.Any())
+            {
+                @foreach (var item in Model)
+                {
+                    <div class="cart-item" id="cart-item-@item.SanPhamID">
+                        <img src="data:image/png;base64,@(Convert.ToBase64String(item.HinhAnhDaiDien ?? new byte[0]))" alt="@item.SanPhamTen" class="item-image" />
+                        <div class="item-details">
+                            <h2 class="item-name">@item.SanPhamTen</h2>
+                            <p class="item-price" id="price-@item.SanPhamID">@String.Format("{0:C}", item.SanPhamGia)</p>
+                            <p class="item-size">Size: @item.Size</p>
+                        </div>
+                        <div class="item-quantity">
+                            <button class="quantity-btn" data-id="@item.SanPhamID" data-action="decrease">-</button>
+                            <input type="number" id="quantity-@item.SanPhamID" value="@item.SoLuong" min="1" readonly>
+                            <button class="quantity-btn" data-id="@item.SanPhamID" data-action="increase">+</button>
+                        </div>
+                        <button class="remove-btn" data-id="@item.SanPhamID">Remove</button>
+                    </div>
+                }
+            }
+            else
+            {
+                <p>Your cart is empty.</p>
+            }
         </div>
         <div class="cart-summary">
             <p class="summary-label">Total:</p>
-            <p class="summary-total">$100.00</p>
+            <p class="summary-total" id="total-price">
+                @String.Format("{0:C}", Model.Sum(item => item.SanPhamGia * item.SoLuong))
+            </p>
             <button class="checkout-btn">Proceed to Checkout</button>
         </div>
+
     </div>
-    <script>
-        document.querySelectorAll('.quantity-btn').forEach(btn => {
-            btn.addEventListener('click', function () {
-                const quantityInput = this.parentElement.querySelector('input');
-                let quantity = parseInt(quantityInput.value);
-                if (this.id.includes('increase')) {
-                    quantity++;
-                } else if (this.id.includes('decrease') && quantity > 1) {
-                    quantity--;
-                }
-                quantityInput.value = quantity;
-                // Update total price logic here
-            });
-        });
-    </script>
 </body>
 </html>

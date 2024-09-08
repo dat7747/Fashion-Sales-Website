@@ -2,9 +2,64 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="~/css/product/detailproduct.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Detail - Luxury Item</title>
+    <style>
+        .product-description,
+        .product-material,
+        .product-origin {
+            margin-bottom: 20px;
+        }
+
+        .add-to-cart-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px; /* Thêm khoảng cách giữa các phần tử */
+        }
+
+        .form-label {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .form-input,
+        .form-select {
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border 0.3s, box-shadow 0.3s, transform 0.3s;
+        }
+
+            .form-input:focus,
+            .form-select:focus {
+                border-color: #333;
+                box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+                outline: none;
+                transform: scale(1.02); /* Phóng to trường khi focus */
+            }
+
+        .add-to-cart-btn {
+            padding: 15px 30px;
+            background-color: #000;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+            font-size: 16px;
+        }
+
+            .add-to-cart-btn:hover {
+                background-color: #333;
+                transform: scale(1.05);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+    </style>
 </head>
 <body>
 
@@ -23,9 +78,13 @@
         <div class="product-details">
             <div class="product-header">
                 <h1 class="product-title">@Model.TenSanPham</h1>
-                <div class="cart-icon">
+                <a href="/Cart/index" class="cart-icon" title="Go to Cart">
                     🛒
-                </div>
+                    @if (ViewBag.CartItemCount > 0)
+                    {
+                        <span class="cart-item-count">@ViewBag.CartItemCount</span>
+                    }
+                </a>
             </div>
             @{
                 var formattedPrice = String.Format("{0:N0}", Model.Gia);
@@ -47,9 +106,30 @@
                 <p>@Model.NhaSanXuat</p>
             </div>
 
+            <!-- Add to Cart Form -->
+            <form action="/Cart/AddToCart" method="post" class="add-to-cart-form">
+                <input type="hidden" name="sanPhamId" value="@Model.SanPhamID" />
 
-            <a href="#" class="add-to-cart">Add to Cart</a>
+                <label for="soLuong" class="form-label">Quantity:</label>
+                <input type="number" name="soLuong" value="1" min="1" required class="form-input" />
+
+                <label for="size" class="form-label">Size:</label>
+                <select name="size" class="form-select" required>
+                    <option value="">Select Size</option>
+                    <option value="38">38</option>
+                    <option value="38.5">38.5</option>
+                    <option value="39">39</option>
+                    <option value="39.5">39.5</option>
+                    <option value="40">40</option>
+                    <option value="40.5">40.5</option>
+                    <option value="41">41</option>
+                    <option value="41.5">41.5</option>
+                    <option value="42">42</option>
+                </select>
+
+                <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+            </form>
         </div>
-    </div
+    </div>
 </body>
 </html>

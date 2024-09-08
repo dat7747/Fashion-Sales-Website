@@ -229,6 +229,14 @@
       "PackagePath": "staticwebassets\\images\\slide_3.jpg"
     },
     {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\js\\Cart\\deleteProductInCart.js",
+      "PackagePath": "staticwebassets\\js\\Cart\\deleteProductInCart.js"
+    },
+    {
+      "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\js\\Cart\\quantity.js",
+      "PackagePath": "staticwebassets\\js\\Cart\\quantity.js"
+    },
+    {
       "Id": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Web_ThoiTrang\\Web_ThoiTrang\\wwwroot\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\js\\bootstrap.min.js"
     },
