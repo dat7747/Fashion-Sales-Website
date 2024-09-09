@@ -23,7 +23,7 @@ namespace Model
         public DbSet<Kho> Kho { get; set; }
         public DbSet<HoaDon> HoaDon { get; set; }
         public DbSet<HoaDonChiTiet> HoaDonChiTiet { get; set; }
-
+        public DbSet<Account> Account { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -55,6 +55,8 @@ namespace Model
                 .HasKey(k => new { k.SanPhamID, k.KichThuocID });
             modelBuilder.Entity<HoaDonChiTiet>()
                 .HasKey(h => h.HoaDonChiTietID);
+            modelBuilder.Entity<Account>()
+                .HasKey(a => a.TenDangNhap);
         }
 
     }
