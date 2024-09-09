@@ -37,5 +37,11 @@ namespace Winform_ThoiTrang
             frm_Warehouse frm = new frm_Warehouse();
             MainContent.Content = frm;
         }
+
+        public void BillMenuItem_Click(Object sender, RoutedEventArgs a)
+        {
+            frm_Bill frm = new frm_Bill();
+            MainContent.Content = frm;
+        }
     }
 }

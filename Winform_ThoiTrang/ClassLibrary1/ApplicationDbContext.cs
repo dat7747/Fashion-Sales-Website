@@ -21,6 +21,8 @@ namespace Model
         public DbSet<KhachHang> khachHangs { get; set; }
         public DbSet<CartItem> CartItem { get; set; }
         public DbSet<Kho> Kho { get; set; }
+        public DbSet<HoaDon> HoaDon { get; set; }
+        public DbSet<HoaDonChiTiet> HoaDonChiTiet { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -51,7 +53,8 @@ namespace Model
                 .HasForeignKey(c => c.KhachHangID);
             modelBuilder.Entity<Kho>()
                 .HasKey(k => new { k.SanPhamID, k.KichThuocID });
-
+            modelBuilder.Entity<HoaDonChiTiet>()
+                .HasKey(h => h.HoaDonChiTietID);
         }
 
     }

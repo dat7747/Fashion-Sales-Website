@@ -79,9 +79,32 @@ namespace Winform_ThoiTrang
 
         private void PaymentButton_Click(object sender, RoutedEventArgs e)
         {
-            // Handle checkout logic here
+
+            if(CartItemsPanel.Children.Count == 0)
+            {
+                MessageBox.Show("Chưa có sản phẩm trong giỏ hàng", "Thông báo", MessageBoxButton.OK);
+                return;
+            }
+            string totalPriceText = TotalPriceText.Text;
+
+            string cleanedPrice = totalPriceText.Replace(".", "").Replace(",", ".").Replace(" ₫", "");
+
+            decimal totalAmount;
+
+            if (decimal.TryParse(cleanedPrice, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, out totalAmount))
+            {
+                frm_Payment paymentWindow = new frm_Payment(totalAmount);
+                paymentWindow.PaymentCompleted += () => LoadCartItems(); // Đăng ký sự kiện
+                paymentWindow.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Giá trị tổng tiền không hợp lệ, vui lòng kiểm tra lại!", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
+
         //===========================Truy vấn ==================================
+
         private void LoadCartItems()
         {
             try

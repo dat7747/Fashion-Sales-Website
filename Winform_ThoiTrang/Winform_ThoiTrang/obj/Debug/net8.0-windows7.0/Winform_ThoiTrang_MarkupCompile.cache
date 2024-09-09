@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\FileNayChuBaiTap\Fashion-Sales-Website\Winform_ThoiTrang\Winform_ThoiTrang\App.xaml
-8226589146
+10-537952287
 
-112041253089
+13-445710758
 239-424655474
-CartView.xaml;frm_AddProducts.xaml;frm_EditProducts.xaml;frm_Home.xaml;frm_Shoes.xaml;frm_Warehouse.xaml;MainWindow.xaml;ProductDetails.xaml;
+CartView.xaml;frm_AddProducts.xaml;frm_Bill.xaml;frm_EditProducts.xaml;frm_Home.xaml;frm_Payment.xaml;frm_Shoes.xaml;frm_Warehouse.xaml;MainWindow.xaml;ProductDetails.xaml;
 
 False
 

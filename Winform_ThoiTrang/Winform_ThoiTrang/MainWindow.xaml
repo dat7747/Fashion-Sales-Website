@@ -76,7 +76,7 @@
                         </DataTemplate>
                     </MenuItem.HeaderTemplate>
                 </MenuItem>
-                <MenuItem>
+                <MenuItem Click="BillMenuItem_Click">
                     <MenuItem.HeaderTemplate>
                         <DataTemplate>
                             <Grid>
