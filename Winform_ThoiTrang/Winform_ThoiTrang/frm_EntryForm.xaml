@@ -1,0 +1,166 @@
+﻿<UserControl x:Class="Winform_ThoiTrang.frm_EntryForm"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" 
+             Background="#f4f4f4" 
+             d:DesignWidth="632.8" Height="598">
+    <Grid Background="White" Margin="20,39,20,68">
+        <!-- Title -->
+        <TextBlock Text="Phiếu Nhập Hàng" 
+                   FontSize="28" 
+                   FontWeight="Bold" 
+                   Foreground="#FFB100"
+                   HorizontalAlignment="Center" 
+                   Margin="0,0,0,20"/>
+
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Height="394" Margin="0,80,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="350"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Nhà Cung Cấp -->
+            <Border BorderBrush="#FFB100" BorderThickness="0,0,0,1" Padding="5" Margin="0,10,0,5">
+                <TextBlock Text="Nhà Cung Cấp:" 
+                           FontWeight="SemiBold" 
+                           VerticalAlignment="Center" 
+                           HorizontalAlignment="Left"/>
+            </Border>
+            <ComboBox x:Name="NhaCungCapComboBox" 
+                      Grid.Column="1"
+                      Height="30"
+                      Width="250"
+                      VerticalAlignment="Center" 
+                      Margin="0,0,0,10"
+                      BorderBrush="#FFB100" 
+                      BorderThickness="1"/>
+
+            <!-- Sản Phẩm -->
+            <Border BorderBrush="#FFB100" BorderThickness="0,0,0,1" Padding="5" Margin="0,10,0,5" Grid.Row="1">
+                <TextBlock Text="Sản Phẩm:" 
+                           FontWeight="SemiBold" 
+                           VerticalAlignment="Center" 
+                           HorizontalAlignment="Left"/>
+            </Border>
+            <!-- Thay vì TextBox, chúng ta sẽ dùng ComboBox trực tiếp với chức năng tự động gợi ý -->
+            <ComboBox x:Name="SanPhamComboBox" 
+                      Grid.Row="1" 
+                      Grid.Column="1"
+                      Height="30"
+                      Width="250"
+                      VerticalAlignment="Center" 
+                      Margin="0,10,0,10"
+                      IsEditable="True"
+                      IsReadOnly="False"
+                      StaysOpenOnEdit="True"
+                      DropDownOpened="SanPhamComboBox_DropDownOpened"
+                      BorderBrush="#FFB100" 
+                      BorderThickness="1"/>
+
+            <!-- Kích Thước -->
+            <Border BorderBrush="#FFB100" BorderThickness="0,0,0,1" Padding="5" Margin="0,10,0,5" Grid.Row="2">
+                <TextBlock Text="Kích Thước:" 
+                           FontWeight="SemiBold" 
+                           VerticalAlignment="Center" 
+                           HorizontalAlignment="Left"/>
+            </Border>
+            <ComboBox x:Name="KichThuocComboBox" 
+                      Grid.Row="2" 
+                      Grid.Column="1" 
+                      Height="30"
+                      Width="250"
+                      VerticalAlignment="Center" 
+                      Margin="0,0,0,10"
+                      BorderBrush="#FFB100" 
+                      BorderThickness="1">
+                <ComboBoxItem Content="35,0"/>
+                <ComboBoxItem Content="36,0"/>
+                <ComboBoxItem Content="37,0"/>
+                <ComboBoxItem Content="38,0"/>
+                <ComboBoxItem Content="39,0"/>
+                <ComboBoxItem Content="40,0"/>
+                <ComboBoxItem Content="41,0"/>
+                <ComboBoxItem Content="42,0"/>
+            </ComboBox>
+
+            <!-- Giá Sản Phẩm -->
+            <Border BorderBrush="#FFB100" BorderThickness="0,0,0,1" Padding="5" Margin="0,10,0,5" Grid.Row="3">
+                <TextBlock Text="Giá Nhập:" 
+                           FontWeight="SemiBold" 
+                           VerticalAlignment="Center" 
+                           HorizontalAlignment="Left"/>
+            </Border>
+            <TextBox x:Name="GiaNhapTextBox" 
+                     Grid.Row="3" 
+                     Grid.Column="1" 
+                     Height="30" 
+                     Width="250" 
+                     VerticalAlignment="Center" 
+                     Margin="0,0,0,10"
+                     BorderBrush="#FFB100" 
+                     BorderThickness="1" />
+
+            <!-- Số Lượng -->
+            <Border BorderBrush="#FFB100" BorderThickness="0,0,0,1" Padding="5" Margin="0,10,0,5" Grid.Row="4">
+                <TextBlock Text="Số Lượng:" 
+                           FontWeight="SemiBold" 
+                           VerticalAlignment="Center" 
+                           HorizontalAlignment="Left"/>
+            </Border>
+            <TextBox x:Name="SoLuongTextBox" 
+                     Grid.Row="4" 
+                     Grid.Column="1" 
+                     Height="30" 
+                     Width="250" 
+                     VerticalAlignment="Center" 
+                     Margin="0,0,0,10"
+                     BorderBrush="#FFB100" 
+                     BorderThickness="1" />
+
+            <!-- Ghi Chú -->
+            <Border BorderBrush="#FFB100" BorderThickness="0,0,0,1" Padding="5" Margin="0,10,0,5" Grid.Row="5">
+                <TextBlock Text="Ghi Chú:" 
+                           FontWeight="SemiBold" 
+                           VerticalAlignment="Center" 
+                           HorizontalAlignment="Left"/>
+            </Border>
+            <TextBox x:Name="GhiChuTextBox" 
+                     Grid.Row="5" 
+                     Grid.Column="1" 
+                     Height="80" 
+                     Width="250" 
+                     VerticalAlignment="Top" 
+                     Margin="0,0,0,10" 
+                     TextWrapping="Wrap" 
+                     AcceptsReturn="True"
+                     BorderBrush="#FFB100" 
+                     BorderThickness="1" />
+
+            <!-- Button Thực Hiện Nhập Hàng -->
+            <Button x:Name="NhapHangButton" 
+                    Grid.Row="6" 
+                    Grid.ColumnSpan="2" 
+                    Content="Nhập Hàng" 
+                    Width="200" 
+                    Height="40" 
+                    Background="#FFB100" 
+                    Foreground="White" 
+                    FontSize="16" 
+                    FontWeight="Bold"
+                    HorizontalAlignment="Center" 
+                    Margin="0,20,0,0"
+                    Click="NhapHangButton_Click"/>
+        </Grid>
+    </Grid>
+</UserControl>

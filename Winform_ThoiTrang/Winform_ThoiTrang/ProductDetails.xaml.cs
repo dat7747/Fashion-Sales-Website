@@ -22,6 +22,8 @@ namespace Winform_ThoiTrang
     /// </summary>
     public partial class ProductDetails : Window
     {
+        public event EventHandler ProductAddedToCart;
+
         private SanPham _product;
         private ApplicationDbContext _context;
         public ProductDetails(SanPham product)
@@ -53,11 +55,10 @@ namespace Winform_ThoiTrang
         }
         private void AddToCart_Click(object sender, RoutedEventArgs e)
         {
-            var selectedSize = (SizeComboBox.SelectedItem as ComboBoxItem)?.Content.ToString() ?? "C"; 
+            var selectedSize = (SizeComboBox.SelectedItem as ComboBoxItem)?.Content.ToString() ?? "C";
 
             if (int.TryParse(QuantityTextBlock.Text, out int quantity) && quantity > 0)
             {
-                // Không cần xác nhận khi không chọn kích cỡ, vì đã gán mặc định là "C"
                 var existingItem = _context.CartItem
                     .FirstOrDefault(ci => ci.SanPhamID == _product.SanPhamID
                                           && ci.KhachHangID == 1 // Giả sử ID khách hàng là 1
@@ -74,7 +75,7 @@ namespace Winform_ThoiTrang
                     var cartItem = new CartItem
                     {
                         SanPhamID = _product.SanPhamID,
-                        KhachHangID = 1, // Nếu khách hàng chưa đăng nhập
+                        KhachHangID = 1,
                         SoLuong = quantity,
                         Size = selectedSize
                     };
@@ -86,6 +87,9 @@ namespace Winform_ThoiTrang
                 {
                     _context.SaveChanges();
                     MessageBox.Show("Đã thêm sản phẩm vào giỏ hàng!", "Thông báo", MessageBoxButton.OK);
+
+                    // Gọi sự kiện ProductAddedToCart để thông báo cho frm_Home cập nhật giỏ hàng
+                    ProductAddedToCart?.Invoke(this, EventArgs.Empty);
                 }
                 catch (DbUpdateException ex)
                 {

@@ -17,10 +17,14 @@
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,10">
                     <TextBlock Text="Kích thước:" FontSize="14" VerticalAlignment="Center" Foreground="#333333" />
                     <ComboBox x:Name="SizeComboBox" Width="100" Margin="10,0,0,0">
-                        <ComboBoxItem Content="S" />
-                        <ComboBoxItem Content="M" />
-                        <ComboBoxItem Content="L" />
-                        <ComboBoxItem Content="XL" />
+                        <ComboBoxItem Content="35,0" />
+                        <ComboBoxItem Content="36,0" />
+                        <ComboBoxItem Content="37,0" />
+                        <ComboBoxItem Content="38,0" />
+                        <ComboBoxItem Content="39,0" />
+                        <ComboBoxItem Content="40,0" />
+                        <ComboBoxItem Content="41,0" />
+                        <ComboBoxItem Content="42,0" />
                     </ComboBox>
                 </StackPanel>
 

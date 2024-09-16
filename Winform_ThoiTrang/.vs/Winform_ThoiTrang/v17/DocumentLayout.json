@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Winform_ThoiTrang\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{862E1012-0555-41D8-BA1C-CEAA8557C757}|ClassLibrary1\\Model.csproj|c:\\filenaychubaitap\\fashion-sales-website\\winform_thoitrang\\classlibrary1\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{862E1012-0555-41D8-BA1C-CEAA8557C757}|ClassLibrary1\\Model.csproj|solutionrelative:classlibrary1\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5CAF195F-9FD6-4581-AE8D-9298B27F3BFB}|Winform_ThoiTrang\\Winform_ThoiTrang.csproj|c:\\filenaychubaitap\\fashion-sales-website\\winform_thoitrang\\winform_thoitrang\\frm_entryform.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5CAF195F-9FD6-4581-AE8D-9298B27F3BFB}|Winform_ThoiTrang\\Winform_ThoiTrang.csproj|solutionrelative:winform_thoitrang\\frm_entryform.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5CAF195F-9FD6-4581-AE8D-9298B27F3BFB}|Winform_ThoiTrang\\Winform_ThoiTrang.csproj|c:\\filenaychubaitap\\fashion-sales-website\\winform_thoitrang\\winform_thoitrang\\frm_login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5CAF195F-9FD6-4581-AE8D-9298B27F3BFB}|Winform_ThoiTrang\\Winform_ThoiTrang.csproj|solutionrelative:winform_thoitrang\\frm_login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5CAF195F-9FD6-4581-AE8D-9298B27F3BFB}|Winform_ThoiTrang\\Winform_ThoiTrang.csproj|c:\\filenaychubaitap\\fashion-sales-website\\winform_thoitrang\\winform_thoitrang\\frm_login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{5CAF195F-9FD6-4581-AE8D-9298B27F3BFB}|Winform_ThoiTrang\\Winform_ThoiTrang.csproj|solutionrelative:winform_thoitrang\\frm_login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{862E1012-0555-41D8-BA1C-CEAA8557C757}|ClassLibrary1\\Model.csproj|c:\\filenaychubaitap\\fashion-sales-website\\winform_thoitrang\\classlibrary1\\sanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{862E1012-0555-41D8-BA1C-CEAA8557C757}|ClassLibrary1\\Model.csproj|solutionrelative:classlibrary1\\sanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,39 +23,28 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Winform_ThoiTrang\\ClassLibrary1\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "ClassLibrary1\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Winform_ThoiTrang\\ClassLibrary1\\ApplicationDbContext.cs",
-              "RelativeToolTip": "ClassLibrary1\\ApplicationDbContext.cs",
-              "ViewState": "AQIAADMAAAAAAAAAAAAiwDwAAAAAAAAA",
+              "Title": "frm_EntryForm.xaml.cs",
+              "DocumentMoniker": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Winform_ThoiTrang\\Winform_ThoiTrang\\frm_EntryForm.xaml.cs",
+              "RelativeDocumentMoniker": "Winform_ThoiTrang\\frm_EntryForm.xaml.cs",
+              "ToolTip": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Winform_ThoiTrang\\Winform_ThoiTrang\\frm_EntryForm.xaml.cs",
+              "RelativeToolTip": "Winform_ThoiTrang\\frm_EntryForm.xaml.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAAAwCEAAABNAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-09T15:08:36.233Z",
+              "WhenOpened": "2024-09-16T05:50:33.456Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "frm_Login.xaml.cs",
-              "DocumentMoniker": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Winform_ThoiTrang\\Winform_ThoiTrang\\frm_Login.xaml.cs",
-              "RelativeDocumentMoniker": "Winform_ThoiTrang\\frm_Login.xaml.cs",
-              "ToolTip": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Winform_ThoiTrang\\Winform_ThoiTrang\\frm_Login.xaml.cs",
-              "RelativeToolTip": "Winform_ThoiTrang\\frm_Login.xaml.cs",
-              "ViewState": "AQIAABwAAAAAAAAAAAAAwCUAAAAMAAAA",
+              "Title": "SanPham.cs",
+              "DocumentMoniker": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Winform_ThoiTrang\\ClassLibrary1\\SanPham.cs",
+              "RelativeDocumentMoniker": "ClassLibrary1\\SanPham.cs",
+              "ToolTip": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Winform_ThoiTrang\\ClassLibrary1\\SanPham.cs",
+              "RelativeToolTip": "ClassLibrary1\\SanPham.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-09T15:00:28.416Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "frm_Login.xaml",
-              "DocumentMoniker": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Winform_ThoiTrang\\Winform_ThoiTrang\\frm_Login.xaml",
-              "RelativeDocumentMoniker": "Winform_ThoiTrang\\frm_Login.xaml",
-              "ToolTip": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Winform_ThoiTrang\\Winform_ThoiTrang\\frm_Login.xaml",
-              "RelativeToolTip": "Winform_ThoiTrang\\frm_Login.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-09-09T14:59:42.618Z",
+              "WhenOpened": "2024-09-16T08:43:29.441Z",
               "EditorCaption": ""
             }
           ]

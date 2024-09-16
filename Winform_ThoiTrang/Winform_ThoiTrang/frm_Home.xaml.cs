@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Identity.Client;
 using Model;
 using System;
 using System.Collections.Generic;
@@ -24,6 +25,7 @@ namespace Winform_ThoiTrang
     public partial class frm_Home : UserControl
     {
         private ApplicationDbContext _context;
+        public static event EventHandler CartUpdated;
 
         public frm_Home()
         {
@@ -33,6 +35,7 @@ namespace Winform_ThoiTrang
             _context = new ApplicationDbContext(optionsBuilder.Options);
             LoadLoaiSanPham();
             LoadProducts();
+            CartUpdated += (s, e) => UpdateCartItemCount();
         }
 
         // Xử lý sự kiện khi nhấp vào hình ảnh
@@ -43,8 +46,19 @@ namespace Winform_ThoiTrang
 
             // Hiển thị cửa sổ chi tiết sản phẩm
             var productDetailsWindow = new ProductDetails(product);
+
+            // Đăng ký sự kiện khi sản phẩm được thêm vào giỏ hàng
+            productDetailsWindow.ProductAddedToCart += ProductDetailsWindow_ProductAddedToCart;
+
             productDetailsWindow.ShowDialog();
         }
+
+        // Xử lý sự kiện khi sản phẩm được thêm vào giỏ hàng
+        private void ProductDetailsWindow_ProductAddedToCart(object sender, EventArgs e)
+        {
+            UpdateCartItemCount();  // Cập nhật số lượng sản phẩm trong giỏ hàng
+        }
+
 
         private void LoaiSanPhamComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -190,6 +204,21 @@ namespace Winform_ThoiTrang
             LoaiSanPhamComboBox.DisplayMemberPath = "Name";
             LoaiSanPhamComboBox.SelectedValuePath = "Id";
         }
+
+        private void UpdateCartItemCount()
+        {
+            // Đếm tổng số lượng sản phẩm trong giỏ hàng của khách hàng (giả sử ID khách hàng là 1)
+            int cartItemCount = _context.CartItem.Where(ci => ci.KhachHangID == 1).Sum(ci => ci.SoLuong);
+
+            // Cập nhật số lượng trên TextBlock của icon giỏ hàng
+            CartItemCountTextBlock.Text = cartItemCount.ToString();
+        }
+
+        public static void OnCartUpdate()
+        {
+            CartUpdated?.Invoke(null,EventArgs.Empty);
+        }
+
     }
 
 }

@@ -16,7 +16,7 @@
 
         <!-- Thanh công cụ -->
         <StackPanel Orientation="Horizontal" Margin="10" Grid.Row="1">
-            <TextBox x:Name="SearchTextBox" Width="300" Margin="0,0,10,0" />
+            <TextBox x:Name="SearchTextBox" Width="300" Margin="0,0,10,0" TextChanged="SearchTextBox_TextChanged"/>
             <ComboBox x:Name="ProductCategoryComboBox" Width="200" Margin="0,0,10,0">
                 <ComboBoxItem Content="Tất cả loại sản phẩm"/>
                 <!-- Thêm các loại sản phẩm khác ở đây -->
@@ -38,11 +38,18 @@
                     </Grid.ColumnDefinitions>
 
                     <!-- Danh sách sản phẩm trong kho -->
-                    <DataGrid x:Name="InStockProductDataGrid" Grid.Column="0" AutoGenerateColumns="True" CanUserAddRows="False"
-                              SelectionChanged="InStockProductDataGrid_SelectionChanged"/>
+                    <DataGrid x:Name="InStockProductDataGrid" Grid.Column="0" AutoGenerateColumns="False" CanUserAddRows="False" Margin="0,0,474,0" Grid.ColumnSpan="2"
+                             SelectionChanged="InStockProductDataGrid_SelectionChanged" >
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="ID Sản Phẩm" Binding="{Binding SanPhamID,  Mode=OneWay}" Width="*"/>
+                            <DataGridTextColumn Header="Tên Sản Phẩm" Binding="{Binding TenSanPham, Mode=OneWay}" Width="*"/>
+                            <DataGridTextColumn Header="Kích Thước" Binding="{Binding KichThuocID, Mode=OneWay}" Width="*"/>
+                            <DataGridTextColumn Header="Số Lượng" Binding="{Binding SoLuong, Mode=OneWay}" Width="*"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
 
                     <!-- Thông tin chi tiết sản phẩm trong kho -->
-                    <StackPanel Grid.Column="1" Margin="10">
+                    <StackPanel Grid.Column="1" Margin="55,10,10,10">
                         <TextBlock Text="Thông tin sản phẩm" FontSize="18" FontWeight="Bold" Margin="0,0,0,10"/>
 
                         <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
@@ -52,7 +59,8 @@
 
                         <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
                             <TextBlock Text="Kích thước:" Width="100" VerticalAlignment="Center"/>
-                            <ComboBox x:Name="InStockSizeComboBox" Width="200"/>
+                            <ComboBox x:Name="InStockSizeComboBox" Width="200" SelectedItem="{Binding KichThuocID, Mode=OneWay}"/>
+
                         </StackPanel>
 
                         <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
@@ -65,17 +73,24 @@
                 </Grid>
             </TabItem>
 
-            <!-- Tab Sản phẩm chưa có trong kho -->
-            <TabItem Header="Sản phẩm chưa có trong kho">
+            <TabItem Header="Danh sách sản phẩm">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="2*"/>
                         <ColumnDefinition Width="3*"/>
                     </Grid.ColumnDefinitions>
 
-                    <!-- Danh sách sản phẩm chưa có trong kho -->
-                    <DataGrid x:Name="NotInStockProductDataGrid" Grid.Column="0" AutoGenerateColumns="True" CanUserAddRows="False"
-                              SelectionChanged="NotInStockProductDataGrid_SelectionChanged"/>
+                    <DataGrid x:Name="NotInStockProductDataGrid" 
+                          Grid.Column="0" 
+                          AutoGenerateColumns="False" 
+                          CanUserAddRows="False" 
+                          SelectionChanged="NotInStockProductDataGrid_SelectionChanged">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="ID Sản Phẩm" Binding="{Binding SanPhamID, Mode=OneWay}" Width="*"/>
+                            <DataGridTextColumn Header="Tên Sản Phẩm" Binding="{Binding TenSanPham, Mode=OneWay}" Width="*"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+
 
                     <!-- Thông tin chi tiết sản phẩm chưa có trong kho -->
                     <StackPanel Grid.Column="1" Margin="10">
@@ -97,7 +112,6 @@
                             <TextBox x:Name="NotInStockQuantityTextBox" Width="60" HorizontalContentAlignment="Center" Margin="5,0" Text="0"/>
                             <Button Content="+" Width="30" Click="IncreaseQuantity_Click"/>
                         </StackPanel>
-
                     </StackPanel>
                 </Grid>
             </TabItem>

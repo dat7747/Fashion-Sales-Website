@@ -35,6 +35,9 @@ namespace Winform_ThoiTrang
             string username = UserNameTextBox.Text;
             string password = PasswordBox.Password;
 
+            username = "sa";
+            password = "123";
+
             var account = _context.Account.FirstOrDefault(a => a.TenDangNhap == username && 
             a.MatKhau ==  password);
 

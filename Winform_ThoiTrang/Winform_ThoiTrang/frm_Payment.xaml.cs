@@ -56,10 +56,44 @@ namespace Winform_ThoiTrang
                 return;
             }
 
-            // Lưu thông tin hóa đơn vào database
+            // Lấy danh sách các sản phẩm trong giỏ hàng của khách hàng
+            var cartItems = _context.CartItem.Where(c => c.KhachHangID == 1).ToList(); // Giả sử KhachHangID = 1
+            List<string> outOfStockProducts = new List<string>();
+
+            foreach (var item in cartItems)
+            {
+                // Log giá trị SanPhamID và KichThuocID của item
+                Console.WriteLine($"Sản phẩm trong giỏ hàng - ID: {item.SanPhamID}, Kích thước: {item.Size}");
+
+                // Tìm sản phẩm trong kho theo SanPhamID và KichThuocID
+                var khoItem = _context.Kho.FirstOrDefault(k => k.SanPhamID == item.SanPhamID && k.KichThuocID == item.Size);
+                // Kiểm tra sản phẩm có tồn tại trong kho với kích thước đó hay không
+                if (khoItem == null)
+                {
+                    // Sản phẩm không tồn tại trong kho
+                    outOfStockProducts.Add($"Sản phẩm ID {item.SanPhamID} không có trong kho.");
+                }
+                else if (khoItem.SoLuong < item.SoLuong)
+                {
+                    // Số lượng sản phẩm trong kho không đủ để bán
+                    outOfStockProducts.Add($"Sản phẩm ID {item.SanPhamID} không đủ số lượng (còn lại {khoItem.SoLuong}).");
+                }
+            }
+
+
+
+            // Nếu có sản phẩm không đủ hàng, thông báo và dừng việc thanh toán
+            if (outOfStockProducts.Any())
+            {
+                string message = "Thanh toán thất bại vì các lý do sau:\n" + string.Join("\n", outOfStockProducts);
+                MessageBox.Show(message, "Thông báo", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+            // Nếu tất cả sản phẩm đều đủ, thực hiện tiếp việc lưu hóa đơn vào database
             HoaDon hoaDon = new HoaDon
             {
-                KhachHangID = 1,
+                KhachHangID = 1, // Giả sử khách hàng ID = 1
                 TongTien = totalAmount,
                 PhuongThucThanhToan = paymentMethod,
                 NgayTao = DateTime.Now
@@ -68,7 +102,6 @@ namespace Winform_ThoiTrang
             _context.HoaDon.Add(hoaDon);
             _context.SaveChanges();
 
-            var cartItems = _context.CartItem.Where(c => c.KhachHangID == hoaDon.KhachHangID).ToList();
             foreach (var item in cartItems)
             {
                 var chiTietHoaDon = new HoaDonChiTiet
@@ -81,19 +114,27 @@ namespace Winform_ThoiTrang
                 };
 
                 _context.HoaDonChiTiet.Add(chiTietHoaDon);
+
+                // Cập nhật số lượng trong kho sau khi bán
+                var khoItem = _context.Kho.FirstOrDefault(k => k.SanPhamID == item.SanPhamID && k.KichThuocID == item.Size);
+                if (khoItem != null)
+                {
+                    khoItem.SoLuong -= item.SoLuong; // Trừ số lượng trong kho
+                }
             }
 
             _context.SaveChanges();
 
+            // Xóa giỏ hàng sau khi thanh toán thành công
             _context.CartItem.RemoveRange(cartItems);
             _context.SaveChanges();
 
-  
             PaymentCompleted?.Invoke();
 
             MessageBox.Show("Thanh toán thành công với phương thức: " + paymentMethod);
             this.Close();
         }
+
         private void CancelPayment_Click(object sender, RoutedEventArgs e)
         {
             this.Close();

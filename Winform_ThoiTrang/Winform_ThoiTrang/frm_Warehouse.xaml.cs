@@ -2,6 +2,7 @@
 using Model;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -43,7 +44,7 @@ namespace Winform_ThoiTrang
             {
                 TabItem selectedTab = (sender as TabControl).SelectedItem as TabItem;
 
-                if (selectedTab.Header.ToString() == "Sản phẩm chưa có trong kho")
+                if (selectedTab.Header.ToString() == "Danh sách sản phẩm")
                 {
                     LoadNotInStockProducts();
                     btn_Luu.IsEnabled = false;
@@ -61,30 +62,50 @@ namespace Winform_ThoiTrang
                 }
             }
         }
+        // Sự kiện SelectionChanged của DataGrid
         private void InStockProductDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            var selectedProduct = (dynamic)InStockProductDataGrid.SelectedItem;
-            if (selectedProduct != null)
+            if (InStockProductDataGrid.SelectedItem != null)
             {
+                // Giả sử đối tượng sản phẩm có các thuộc tính: SanPhamID, TenSanPham, SoLuong, KichThuocID
+                var selectedProduct = (dynamic)InStockProductDataGrid.SelectedItem;
+
+                // Cập nhật giá trị biến toàn cục selectedProductID
                 selectedProductID = selectedProduct.SanPhamID;
-                // Hiển thị thông tin sản phẩm đã chọn
-                InStockProductNameTextBox.Text = selectedProduct.TenSanPham;
-                InStockSizeComboBox.ItemsSource = GetAvailableSizes(); // Nạp dữ liệu cho ComboBox
-                InStockSizeComboBox.SelectedItem = selectedProduct.KichThuocID.ToString();
+
+                // Cập nhật các textbox và combobox trên form
+                InStockProductNameTextBox.Text = selectedProduct.TenSanPham ?? "";
                 InStockQuantityTextBox.Text = selectedProduct.SoLuong.ToString();
+
+                // Cập nhật giá trị ComboBox (nếu KichThuocID tồn tại)
+                if (selectedProduct.KichThuocID != null)
+                {
+                    InStockSizeComboBox.SelectedItem = selectedProduct.KichThuocID;
+                }
+            }
+            else
+            {
+                // Nếu không có sản phẩm nào được chọn
+                selectedProductID = 0;
+                InStockProductNameTextBox.Clear();
+                InStockQuantityTextBox.Clear();
+                InStockSizeComboBox.SelectedItem = null;
             }
         }
 
+
         private void NotInStockProductDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            var selectedProduct = (dynamic)NotInStockProductDataGrid.SelectedItem;
-            if (selectedProduct != null)
+            if (NotInStockProductDataGrid.SelectedItem != null)
             {
-                // Lưu ID sản phẩm để sử dụng trong các hàm khác nếu cần
-                selectedProductID = selectedProduct.SanPhamID;
-
-                NotInStockProductNameTextBox.Text = selectedProduct.TenSanPham;
-                NotInStockQuantityTextBox.Text = "0";
+                // Explicitly cast to the correct type
+                var selectedProduct = NotInStockProductDataGrid.SelectedItem as dynamic;
+                if (selectedProduct != null)
+                {
+                    // Assign values while handling potential nulls
+                    NotInStockProductNameTextBox.Text = selectedProduct.TenSanPham ?? ""; // Ensure string is not null
+                   
+                }
             }
         }
 
@@ -160,7 +181,7 @@ namespace Winform_ThoiTrang
                 return;
             }
 
-            string kichThuocID = InStockSizeComboBox.SelectedItem?.ToString() + ",0";
+            string kichThuocID = InStockSizeComboBox.SelectedItem?.ToString();
             int soLuong;
 
             if (int.TryParse(InStockQuantityTextBox.Text, out soLuong))
@@ -207,21 +228,56 @@ namespace Winform_ThoiTrang
             }
         }
 
+        private void SearchTextBox_TextChanged(object sender, EventArgs e)
+        {
+            string searchText = SearchTextBox.Text.ToLower();
 
+            // Tìm sản phẩm có trong kho
+            var inStockProducts = (from sp in _context.SanPham
+                                   join kho in _context.Kho on sp.SanPhamID equals kho.SanPhamID
+                                   where sp.TenSanPham.ToLower().Contains(searchText)
+                                   select new
+                                   {
+                                       kho.SanPhamID,      // ID Sản phẩm
+                                       sp.TenSanPham,      // Tên sản phẩm
+                                       kho.KichThuocID,    // Kích thước (size)
+                                       kho.SoLuong         // Số lượng
+                                   }).ToList();
+
+            // Tìm sản phẩm chưa có trong kho
+            var notInStockProducts = (from sp in _context.SanPham
+                                      where !_context.Kho.Any(kho => kho.SanPhamID == sp.SanPhamID)
+                                            && sp.TenSanPham.ToLower().Contains(searchText)
+                                      select new
+                                      {
+                                          sp.SanPhamID,
+                                          sp.TenSanPham
+                                      }).ToList();
+
+            // Cập nhật DataGrid cho các sản phẩm trong kho
+            InStockProductDataGrid.ItemsSource = inStockProducts;
+
+            // Cập nhật DataGrid cho các sản phẩm chưa có trong kho
+            NotInStockProductDataGrid.ItemsSource = notInStockProducts;
+        }
 
         //==============Truy vấn========================
         //sản phẩm không có trong kho
         private void LoadNotInStockProducts()
         {
-            var product = (from sp in _context.SanPham
-                           where !_context.Kho.Any(k => k.SanPhamID == sp.SanPhamID)
-                           select new
-                           {
-                               sp.SanPhamID,
-                               sp.TenSanPham
-                           }).ToList();
-            NotInStockProductDataGrid.ItemsSource = product;
+            var products = (from sp in _context.SanPham
+                            select new
+                            {
+                                sp.SanPhamID,
+                                sp.TenSanPham
+                            }).ToList();
+
+            // Kiểm tra số lượng sản phẩm chưa có trong kho
+            Debug.WriteLine($"Số lượng sản phẩm chưa có trong kho: {products.Count}");
+
+            NotInStockProductDataGrid.ItemsSource = products;
         }
+
         private void InitializeSizeComboBox()
         {
             var sizes = Enumerable.Range(35, 10).Select(x => x.ToString("0.0")).ToList();
@@ -236,18 +292,18 @@ namespace Winform_ThoiTrang
                                   join sp in _context.SanPham on kho.SanPhamID equals sp.SanPhamID
                                   select new
                                   {
-                                      kho.SanPhamID,
-                                      sp.TenSanPham,
-                                      kho.KichThuocID,
-                                      kho.SoLuong
+                                      kho.SanPhamID,      // ID Sản phẩm
+                                      sp.TenSanPham,      // Tên sản phẩm
+                                      kho.KichThuocID,    // Kích thước (size)
+                                      kho.SoLuong         // Số lượng
                                   };
 
-            InStockProductDataGrid.ItemsSource = inStockProducts.ToList();
-        }
-        private List<string> GetAvailableSizes()
-        {
-            // Trả về danh sách các kích thước sản phẩm, ví dụ như:
-            return new List<string> { "35", "36", "37", "38", "39", "40", "41", "42", "43", "44" };
+            // Kiểm tra số lượng sản phẩm trong kho
+            var productsList = inStockProducts.ToList();
+            Debug.WriteLine($"Số lượng sản phẩm trong kho: {productsList.Count}");
+
+            // Gán dữ liệu vào DataGrid
+            InStockProductDataGrid.ItemsSource = productsList;
         }
 
         private void themSPVaoKho()

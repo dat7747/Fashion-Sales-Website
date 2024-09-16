@@ -104,7 +104,7 @@
                         </DataTemplate>
                     </MenuItem.HeaderTemplate>
                 </MenuItem>
-                <MenuItem>
+                <MenuItem Click="EntryFormMenuItem_Click">
                     <MenuItem.HeaderTemplate>
                         <DataTemplate>
                             <Grid>

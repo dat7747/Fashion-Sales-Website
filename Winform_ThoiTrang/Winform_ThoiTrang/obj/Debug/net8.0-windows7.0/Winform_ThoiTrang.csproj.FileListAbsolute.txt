@@ -89,3 +89,5 @@ C:\FileNayChuBaiTap\Fashion-Sales-Website\Winform_ThoiTrang\Winform_ThoiTrang\ob
 C:\FileNayChuBaiTap\Fashion-Sales-Website\Winform_ThoiTrang\Winform_ThoiTrang\obj\Debug\net8.0-windows7.0\frm_Bill.g.cs
 C:\FileNayChuBaiTap\Fashion-Sales-Website\Winform_ThoiTrang\Winform_ThoiTrang\obj\Debug\net8.0-windows7.0\frm_Login.baml
 C:\FileNayChuBaiTap\Fashion-Sales-Website\Winform_ThoiTrang\Winform_ThoiTrang\obj\Debug\net8.0-windows7.0\frm_Login.g.cs
+C:\FileNayChuBaiTap\Fashion-Sales-Website\Winform_ThoiTrang\Winform_ThoiTrang\obj\Debug\net8.0-windows7.0\frm_EntryForm.baml
+C:\FileNayChuBaiTap\Fashion-Sales-Website\Winform_ThoiTrang\Winform_ThoiTrang\obj\Debug\net8.0-windows7.0\frm_EntryForm.g.cs

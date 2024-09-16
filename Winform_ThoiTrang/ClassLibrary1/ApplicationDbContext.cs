@@ -24,6 +24,9 @@ namespace Model
         public DbSet<HoaDon> HoaDon { get; set; }
         public DbSet<HoaDonChiTiet> HoaDonChiTiet { get; set; }
         public DbSet<Account> Account { get; set; }
+        public DbSet<NhaCungCap> NhaCungCap { get; set; }
+        public DbSet<PhieuNhap> PhieuNhap { get; set; }
+        public DbSet<ChiTietPhieuNhap> ChiTietPhieuNhap { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

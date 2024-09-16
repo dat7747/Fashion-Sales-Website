@@ -31,6 +31,7 @@ namespace Winform_ThoiTrang
 
         public void StoreMenuitem_Click(object sender, RoutedEventArgs e) {
             MainContent.Content = new frm_Home();
+            frm_Home.OnCartUpdate();
         }
         public void WarehouseMenuItem_Click(Object sender, RoutedEventArgs e)
         {
@@ -41,6 +42,11 @@ namespace Winform_ThoiTrang
         public void BillMenuItem_Click(Object sender, RoutedEventArgs a)
         {
             frm_Bill frm = new frm_Bill();
+            MainContent.Content = frm;
+        }
+        public void EntryFormMenuItem_Click(Object sender, RoutedEventArgs a)
+        {
+            frm_EntryForm frm = new frm_EntryForm();
             MainContent.Content = frm;
         }
     }

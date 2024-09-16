@@ -68,7 +68,7 @@ namespace Winform_ThoiTrang {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Winform_ThoiTrang;component/cartview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Winform_ThoiTrang;V1.0.0.0;component/cartview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\CartView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

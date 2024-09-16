@@ -19,6 +19,9 @@
     <Compile Update="frm_EditProducts.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="frm_EntryForm.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="frm_Home.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -49,6 +52,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="frm_EditProducts.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="frm_EntryForm.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="frm_Home.xaml">

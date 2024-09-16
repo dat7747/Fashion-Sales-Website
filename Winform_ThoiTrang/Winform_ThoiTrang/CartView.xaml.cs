@@ -24,7 +24,6 @@ namespace Winform_ThoiTrang
     public partial class CartView : Window
     {
         private ApplicationDbContext _context;
-
         public CartView()
         {
             InitializeComponent();
@@ -45,6 +44,7 @@ namespace Winform_ThoiTrang
                 _context.CartItem.Remove(cartItem);
                 _context.SaveChanges();
                 LoadCartItems();
+                frm_Home.OnCartUpdate();
             }
             UpdateTotal();
         }
@@ -59,6 +59,7 @@ namespace Winform_ThoiTrang
                 cartItem.SoLuong--;
                 _context.SaveChanges();
                 LoadCartItems();
+                frm_Home.OnCartUpdate();
             }
             UpdateTotal();
         }
@@ -73,6 +74,7 @@ namespace Winform_ThoiTrang
                 cartItem.SoLuong++;
                 _context.SaveChanges();
                 LoadCartItems();
+                frm_Home.OnCartUpdate();
             }
             UpdateTotal();
         }
