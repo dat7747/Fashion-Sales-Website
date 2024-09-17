@@ -49,5 +49,11 @@ namespace Winform_ThoiTrang
             frm_EntryForm frm = new frm_EntryForm();
             MainContent.Content = frm;
         }
+
+        private void BillStatisticsFormMenuItem_Click(Object sender, RoutedEventArgs a)
+        {
+            frm_BillStatistics frm = new frm_BillStatistics();
+            MainContent.Content = frm;
+        }
     }
 }

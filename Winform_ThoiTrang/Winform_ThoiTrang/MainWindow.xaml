@@ -210,7 +210,7 @@
                         </DataTemplate>
                     </MenuItem.HeaderTemplate>
                 </MenuItem>
-                <MenuItem>
+                <MenuItem  Click="BillStatisticsFormMenuItem_Click">
                     <MenuItem.HeaderTemplate>
                         <DataTemplate>
                             <Grid>

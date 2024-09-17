@@ -100,7 +100,7 @@ namespace Winform_ThoiTrang {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Winform_ThoiTrang;V1.0.0.0;component/frm_editproducts.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Winform_ThoiTrang;component/frm_editproducts.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\frm_EditProducts.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

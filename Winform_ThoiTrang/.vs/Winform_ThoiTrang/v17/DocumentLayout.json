@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Winform_ThoiTrang\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5CAF195F-9FD6-4581-AE8D-9298B27F3BFB}|Winform_ThoiTrang\\Winform_ThoiTrang.csproj|c:\\filenaychubaitap\\fashion-sales-website\\winform_thoitrang\\winform_thoitrang\\frm_entryform.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5CAF195F-9FD6-4581-AE8D-9298B27F3BFB}|Winform_ThoiTrang\\Winform_ThoiTrang.csproj|solutionrelative:winform_thoitrang\\frm_entryform.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5CAF195F-9FD6-4581-AE8D-9298B27F3BFB}|Winform_ThoiTrang\\Winform_ThoiTrang.csproj|c:\\filenaychubaitap\\fashion-sales-website\\winform_thoitrang\\winform_thoitrang\\frm_billstatistics.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5CAF195F-9FD6-4581-AE8D-9298B27F3BFB}|Winform_ThoiTrang\\Winform_ThoiTrang.csproj|solutionrelative:winform_thoitrang\\frm_billstatistics.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{862E1012-0555-41D8-BA1C-CEAA8557C757}|ClassLibrary1\\Model.csproj|c:\\filenaychubaitap\\fashion-sales-website\\winform_thoitrang\\classlibrary1\\sanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{862E1012-0555-41D8-BA1C-CEAA8557C757}|ClassLibrary1\\Model.csproj|solutionrelative:classlibrary1\\sanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5CAF195F-9FD6-4581-AE8D-9298B27F3BFB}|Winform_ThoiTrang\\Winform_ThoiTrang.csproj|c:\\filenaychubaitap\\fashion-sales-website\\winform_thoitrang\\winform_thoitrang\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5CAF195F-9FD6-4581-AE8D-9298B27F3BFB}|Winform_ThoiTrang\\Winform_ThoiTrang.csproj|solutionrelative:winform_thoitrang\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5CAF195F-9FD6-4581-AE8D-9298B27F3BFB}|Winform_ThoiTrang\\Winform_ThoiTrang.csproj|c:\\filenaychubaitap\\fashion-sales-website\\winform_thoitrang\\winform_thoitrang\\frm_billstatistics.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5CAF195F-9FD6-4581-AE8D-9298B27F3BFB}|Winform_ThoiTrang\\Winform_ThoiTrang.csproj|solutionrelative:winform_thoitrang\\frm_billstatistics.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5CAF195F-9FD6-4581-AE8D-9298B27F3BFB}|Winform_ThoiTrang\\Winform_ThoiTrang.csproj|c:\\filenaychubaitap\\fashion-sales-website\\winform_thoitrang\\winform_thoitrang\\frm_billstatistics.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{5CAF195F-9FD6-4581-AE8D-9298B27F3BFB}|Winform_ThoiTrang\\Winform_ThoiTrang.csproj|solutionrelative:winform_thoitrang\\frm_billstatistics.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,33 +26,57 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frm_EntryForm.xaml.cs",
-              "DocumentMoniker": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Winform_ThoiTrang\\Winform_ThoiTrang\\frm_EntryForm.xaml.cs",
-              "RelativeDocumentMoniker": "Winform_ThoiTrang\\frm_EntryForm.xaml.cs",
-              "ToolTip": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Winform_ThoiTrang\\Winform_ThoiTrang\\frm_EntryForm.xaml.cs",
-              "RelativeToolTip": "Winform_ThoiTrang\\frm_EntryForm.xaml.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAAwCEAAABNAAAA",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Winform_ThoiTrang\\Winform_ThoiTrang\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Winform_ThoiTrang\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Winform_ThoiTrang\\Winform_ThoiTrang\\MainWindow.xaml.cs",
+              "RelativeToolTip": "Winform_ThoiTrang\\MainWindow.xaml.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAtwBIAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-16T05:50:33.456Z",
-              "IsPinned": true,
+              "WhenOpened": "2024-09-17T15:47:11.632Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SanPham.cs",
-              "DocumentMoniker": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Winform_ThoiTrang\\ClassLibrary1\\SanPham.cs",
-              "RelativeDocumentMoniker": "ClassLibrary1\\SanPham.cs",
-              "ToolTip": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Winform_ThoiTrang\\ClassLibrary1\\SanPham.cs",
-              "RelativeToolTip": "ClassLibrary1\\SanPham.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAcAAAA",
+              "DocumentIndex": 3,
+              "Title": "frm_BillStatistics.xaml",
+              "DocumentMoniker": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Winform_ThoiTrang\\Winform_ThoiTrang\\frm_BillStatistics.xaml",
+              "RelativeDocumentMoniker": "Winform_ThoiTrang\\frm_BillStatistics.xaml",
+              "ToolTip": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Winform_ThoiTrang\\Winform_ThoiTrang\\frm_BillStatistics.xaml",
+              "RelativeToolTip": "Winform_ThoiTrang\\frm_BillStatistics.xaml",
+              "ViewState": "AQIAAC4AAAAAAAAAAAApwEIAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-17T15:35:57.786Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frm_BillStatistics.xaml.cs",
+              "DocumentMoniker": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Winform_ThoiTrang\\Winform_ThoiTrang\\frm_BillStatistics.xaml.cs",
+              "RelativeDocumentMoniker": "Winform_ThoiTrang\\frm_BillStatistics.xaml.cs",
+              "ToolTip": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Winform_ThoiTrang\\Winform_ThoiTrang\\frm_BillStatistics.xaml.cs",
+              "RelativeToolTip": "Winform_ThoiTrang\\frm_BillStatistics.xaml.cs",
+              "ViewState": "AQIAACMAAAAAAAAAAAAlwDEAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-16T08:43:29.441Z",
+              "WhenOpened": "2024-09-17T15:31:52.919Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frm_BillStatistics.xaml",
+              "DocumentMoniker": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Winform_ThoiTrang\\Winform_ThoiTrang\\frm_BillStatistics.xaml",
+              "RelativeDocumentMoniker": "Winform_ThoiTrang\\frm_BillStatistics.xaml",
+              "ToolTip": "C:\\FileNayChuBaiTap\\Fashion-Sales-Website\\Winform_ThoiTrang\\Winform_ThoiTrang\\frm_BillStatistics.xaml",
+              "RelativeToolTip": "Winform_ThoiTrang\\frm_BillStatistics.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-17T15:19:55.247Z",
               "EditorCaption": ""
             }
           ]
