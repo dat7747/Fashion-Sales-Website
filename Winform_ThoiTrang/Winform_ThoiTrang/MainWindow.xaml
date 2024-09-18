@@ -33,7 +33,7 @@
             </MenuItem>
 
             <!-- Manage Menu Item -->
-            <MenuItem>
+            <MenuItem x:Name="ManageMenuItem">
                 <MenuItem.HeaderTemplate>
                     <DataTemplate>
                         <Grid>

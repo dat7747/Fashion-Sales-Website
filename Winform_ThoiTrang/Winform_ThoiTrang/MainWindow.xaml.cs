@@ -17,11 +17,21 @@ namespace Winform_ThoiTrang
     public partial class MainWindow : Window
     {
         private readonly ApplicationDbContext _context;
-        public MainWindow()
+        private int _role;
+        public MainWindow(int role)
         {
             InitializeComponent();
+            _role = role;
+            Enable();
         }
 
+        private void Enable()
+        {
+            if(_role == 0)
+            {
+                ManageMenuItem.Visibility = Visibility.Collapsed;
+            }
+        }
         public void ShoesMenuItem_Click(object sender, RoutedEventArgs e)
         {
             frm_Shoes shoes_form = new frm_Shoes();

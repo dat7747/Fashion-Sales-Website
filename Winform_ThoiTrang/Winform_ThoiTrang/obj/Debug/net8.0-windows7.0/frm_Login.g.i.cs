@@ -76,7 +76,7 @@ namespace Winform_ThoiTrang {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Winform_ThoiTrang;V1.0.0.0;component/frm_login.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Winform_ThoiTrang;component/frm_login.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\frm_Login.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

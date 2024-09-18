@@ -35,8 +35,6 @@ namespace Winform_ThoiTrang
             string username = UserNameTextBox.Text;
             string password = PasswordBox.Password;
 
-            username = "sa";
-            password = "123";
 
             var account = _context.Account.FirstOrDefault(a => a.TenDangNhap == username && 
             a.MatKhau ==  password);
@@ -45,7 +43,7 @@ namespace Winform_ThoiTrang
             if (account != null)
             {
                 MessageBox.Show("Đăng Nhập Thành Công");
-                MainWindow fr = new MainWindow();
+                MainWindow fr = new MainWindow(account.Role);
                 fr.Show();
                 this.Close();
             }
