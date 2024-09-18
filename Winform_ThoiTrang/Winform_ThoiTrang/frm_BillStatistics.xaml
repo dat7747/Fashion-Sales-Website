@@ -3,7 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:oxy="http://oxyplot.org/wpf"
              mc:Ignorable="d"
              d:DesignWidth="966.4" d:DesignHeight="600">
 
@@ -63,33 +62,61 @@
                     Click="OnThongKeClick"/>
         </Grid>
 
-        <!-- Chart Section -->
-        <oxy:PlotView x:Name="ChartView" 
-                      Margin="0,150,0,20" 
-                      VerticalAlignment="Stretch"
-                      HorizontalAlignment="Stretch"
-                      Background="White"/>
+        <!-- DataGrid Section -->
+        <DataGrid x:Name="BillDataGrid" 
+                  AutoGenerateColumns="False"
+                  Margin="0,150,0,20" 
+                  VerticalAlignment="Stretch"
+                  HorizontalAlignment="Stretch"
+                  Background="White"
+                  CanUserAddRows="False"
+                  CanUserDeleteRows="False">
+            <DataGrid.Columns>
+                <!-- Cột mã hóa đơn -->
+                <DataGridTextColumn Header="Mã Hóa Đơn" Binding="{Binding HoaDonID}" Width="*" />
 
-        <!-- Result Section -->
+                <!-- Cột tên khách hàng -->
+                <DataGridTextColumn Header="Tên Khách Hàng" Binding="{Binding KhachHang.Ten}" Width="*" />
+
+                <!-- Cột ngày tạo -->
+                <DataGridTextColumn Header="Ngày Tạo" Binding="{Binding NgayTao}" Width="*" />
+
+                <!-- Cột tổng tiền -->
+                <DataGridTextColumn Header="Tổng Tiền" Binding="{Binding TongTien, StringFormat=N0}" Width="*" />
+
+                <!-- Cột phương thức thanh toán -->
+                <DataGridTextColumn Header="Phương Thức Thanh Toán" Binding="{Binding PhuongThucThanhToan}" Width="*" />
+
+                <!-- Cột với nút xem chi tiết -->
+                <DataGridTemplateColumn Header="Hành Động" Width="150">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Xem Chi Tiết" Tag="{Binding HoaDonID}" Click="ViewDetails_Click"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,20,0,0">
             <TextBlock x:Name="TotalClothesText" 
-                       Text="Tổng số hàng quần, áo: 0" 
-                       FontSize="16" 
-                       FontWeight="SemiBold" 
-                       Foreground="Black" 
-                       Margin="0,5"/>
+               Text="Tổng số hàng quần, áo: 0" 
+               FontSize="16" 
+               FontWeight="SemiBold" 
+               Foreground="Black" 
+               Margin="0,5"/>
             <TextBlock x:Name="TotalShoesText" 
-                       Text="Tổng số hàng giày: 0" 
-                       FontSize="16" 
-                       FontWeight="SemiBold" 
-                       Foreground="Black" 
-                       Margin="20,5"/>
+               Text="Tổng số hàng giày: 0" 
+               FontSize="16" 
+               FontWeight="SemiBold" 
+               Foreground="Black" 
+               Margin="20,5" Width="152"/>
             <TextBlock x:Name="TotalBagsText" 
-                       Text="Tổng số hàng túi xách: 0" 
-                       FontSize="16" 
-                       FontWeight="SemiBold" 
-                       Foreground="Black" 
-                       Margin="20,5"/>
+               Text="Tổng số hàng túi xách: 0" 
+               FontSize="16" 
+               FontWeight="SemiBold" 
+               Foreground="Black" 
+               Margin="20,5"/>
         </StackPanel>
     </Grid>
 </UserControl>

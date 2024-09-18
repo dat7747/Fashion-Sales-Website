@@ -1,0 +1,74 @@
+﻿<Window x:Class="Winform_ThoiTrang.frm_DetailBill"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Chi Tiết Hóa Đơn" Height="700" Width="1000">
+    <Grid Margin="20">
+        <!-- Header Section -->
+        <StackPanel Orientation="Vertical" Margin="0,0,0,20" HorizontalAlignment="Center">
+            <TextBlock Text="CÔNG TY ABC" 
+                       FontSize="24" 
+                       FontWeight="Bold" 
+                       Foreground="#FF5722"
+                       HorizontalAlignment="Center"
+                       Margin="0,0,0,5"/>
+            <TextBlock Text="Địa chỉ công ty: 123 Đường ABC, TP. HCM" 
+                       FontSize="16" 
+                       HorizontalAlignment="Center"/>
+            <TextBlock Text="Số điện thoại: (012) 345-6789" 
+                       FontSize="16" 
+                       HorizontalAlignment="Center"/>
+            <TextBlock Text="Email: contact@companyabc.com" 
+                       FontSize="16" 
+                       HorizontalAlignment="Center"/>
+            <TextBlock Text="HÓA ĐƠN BÁN HÀNG" 
+                       FontSize="24" 
+                       FontWeight="Bold" 
+                       Foreground="#FF5722"
+                       HorizontalAlignment="Center"
+                       Margin="0,20,0,5"/>
+        </StackPanel>
+
+        <!-- Invoice Details -->
+        <Border BorderBrush="#FF5722" BorderThickness="2" CornerRadius="8" Padding="10" Margin="0,0,0,20">
+            <StackPanel Orientation="Vertical">
+                <TextBlock Text="Mã Hóa Đơn:" FontWeight="Bold" FontSize="16"/>
+                <TextBlock x:Name="BillIDText" FontSize="16" Margin="0,0,0,10"/>
+
+                <TextBlock Text="Tên Khách Hàng:" FontWeight="Bold" FontSize="16"/>
+                <TextBlock x:Name="CustomerNameText" FontSize="16" Margin="0,0,0,10"/>
+
+                <TextBlock Text="Ngày Tạo:" FontWeight="Bold" FontSize="16"/>
+                <TextBlock x:Name="CreationDateText" FontSize="16" Margin="0,0,0,10"/>
+            </StackPanel>
+        </Border>
+
+        <!-- Products DataGrid -->
+        <Border BorderBrush="#FF5722" BorderThickness="2" CornerRadius="8" Padding="10" Background="#F5F5F5" Margin="0,180,0,20">
+            <DataGrid x:Name="ProductDataGrid" 
+                      AutoGenerateColumns="False"
+                      Background="White"
+                      BorderBrush="Gray"
+                      BorderThickness="1"
+                      CanUserAddRows="False"
+                      VerticalAlignment="Top">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Sản Phẩm" Binding="{Binding Path=SanPham}" Width="*" />
+                    <DataGridTextColumn Header="Số Lượng" Binding="{Binding Path=SoLuong}" Width="*"/>
+                    <DataGridTextColumn Header="Giá" Binding="{Binding Path=DonGia, StringFormat=N0}" Width="*"/>
+                    <DataGridTextColumn Header="Kích Thước" Binding="{Binding Path=Size}" Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Border>
+
+        <!-- Total Amount Section -->
+        <Border BorderBrush="#FF5722" BorderThickness="2" CornerRadius="8" Padding="10" Background="#FFF8F1" VerticalAlignment="Bottom" Margin="0,0,0,20">
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Right">
+                <TextBlock Text="Tổng Tiền:" FontWeight="Bold" FontSize="16"/>
+                <TextBlock x:Name="TotalAmountText" FontSize="16" FontWeight="Bold" Margin="0,5,0,0"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

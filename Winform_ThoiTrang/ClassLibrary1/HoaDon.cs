@@ -14,6 +14,8 @@ namespace Model
         public decimal TongTien { get; set; }
         public string PhuongThucThanhToan { get; set; }
         public KhachHang KhachHang { get; set; }
+
+        public ICollection<HoaDonChiTiet> HoaDonChiTiet { get; set; }
     }
 
 }

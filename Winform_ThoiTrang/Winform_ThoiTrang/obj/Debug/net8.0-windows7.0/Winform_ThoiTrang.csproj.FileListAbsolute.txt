@@ -96,3 +96,6 @@ C:\FileNayChuBaiTap\Fashion-Sales-Website\Winform_ThoiTrang\Winform_ThoiTrang\bi
 C:\FileNayChuBaiTap\Fashion-Sales-Website\Winform_ThoiTrang\Winform_ThoiTrang\bin\Debug\net8.0-windows7.0\OxyPlot.Wpf.Shared.dll
 C:\FileNayChuBaiTap\Fashion-Sales-Website\Winform_ThoiTrang\Winform_ThoiTrang\obj\Debug\net8.0-windows7.0\frm_BillStatistics.baml
 C:\FileNayChuBaiTap\Fashion-Sales-Website\Winform_ThoiTrang\Winform_ThoiTrang\obj\Debug\net8.0-windows7.0\frm_BillStatistics.g.cs
+C:\FileNayChuBaiTap\Fashion-Sales-Website\Winform_ThoiTrang\Winform_ThoiTrang\bin\Debug\net8.0-windows7.0\OxyPlot.WindowsForms.dll
+C:\FileNayChuBaiTap\Fashion-Sales-Website\Winform_ThoiTrang\Winform_ThoiTrang\obj\Debug\net8.0-windows7.0\frm_DetailBill.baml
+C:\FileNayChuBaiTap\Fashion-Sales-Website\Winform_ThoiTrang\Winform_ThoiTrang\obj\Debug\net8.0-windows7.0\frm_DetailBill.g.cs

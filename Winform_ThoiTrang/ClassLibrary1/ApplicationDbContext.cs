@@ -18,7 +18,7 @@ namespace Model
         public DbSet<LoaiSanPham> LoaiSanPham { get; set; }
         public DbSet<SanPham> SanPhams { get; set; }
         public DbSet<HinhAnhSanPham> HinhAnhSanPham { get; set; }
-        public DbSet<KhachHang> khachHangs { get; set; }
+        public DbSet<KhachHang> khachHang { get; set; }
         public DbSet<CartItem> CartItem { get; set; }
         public DbSet<Kho> Kho { get; set; }
         public DbSet<HoaDon> HoaDon { get; set; }
@@ -60,6 +60,10 @@ namespace Model
                 .HasKey(h => h.HoaDonChiTietID);
             modelBuilder.Entity<Account>()
                 .HasKey(a => a.TenDangNhap);
+            modelBuilder.Entity<HoaDon>()
+               .HasMany(h => h.HoaDonChiTiet)
+               .WithOne(cd => cd.HoaDon)
+               .HasForeignKey(cd => cd.HoaDonID);
         }
 
     }
